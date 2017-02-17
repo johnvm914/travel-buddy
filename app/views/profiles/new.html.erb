@@ -1,0 +1,27 @@
+<h1>Create Your TravelBuddy Profile:</h1>
+<%= form_tag "/profiles", method: :post do %>
+  <div>
+    Image Url:
+    <input type="text" name="image">
+  </div>
+  <br>
+
+  <div>
+    Age:
+    <input type="text" name="age">
+  </div>
+  <br>
+
+  <div>
+    Location(City, State)
+    <input type="text" name="email">
+  </div>
+  <br>
+
+  <div>
+    Tell other users about yourself:<br>
+    <textarea name="bio"> </textarea>
+  </div>
+
+  <input type="submit" value="Create Profile">
+<% end %>
