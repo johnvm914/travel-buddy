@@ -1,0 +1,11 @@
+<h1>Your Profile:</h1>
+
+<p><img src=<%= @profile.image %>></p>
+<p>Age: <%= @profile.age %></p>
+<p>Location: <%= @profile.location %></p>
+<p>Bio: <%= @profile.bio %></p>
+
+<form action="/profiles/<%= @profile.id %>/edit">
+    <input type="submit" value="Edit Your Profile">
+</form><br>
+<%= button_to "Delete Your Profile", {controller: :profiles, action: "destroy", id: @profile.id }, method: :delete %>

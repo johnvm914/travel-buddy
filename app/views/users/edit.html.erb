@@ -1,0 +1,34 @@
+<h1>Edit Your TravelBuddy Account:</h1>
+<%= form_tag "/users/#{@user.id}", method: :patch do %>
+  <div>
+    First Name:
+    <input type="text" name="first_name" value=<%= @user.first_name %>>
+  </div>
+
+  <div>
+    Last Name:
+    <input type="text" name="last_name" value=<%= @user.last_name %>>
+  </div>
+
+  <div>
+    Email:
+    <input type="email" name="email" value=<%= @user.email %>>
+  </div>
+
+  <div>
+    User Name:
+    <input type="text" name="user_name" value=<%= @user.user_name %>>
+  </div>
+
+  <div>
+    Password:
+    <input type="password" name="password">
+  </div>
+
+  <div>
+    Confirm Password:
+    <input type="password" name="password_confirmation">
+  </div>
+
+  <input type="submit" value="Update Account">
+<% end %>

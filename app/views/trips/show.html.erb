@@ -1,0 +1,12 @@
+<h1><%= @trip.destination %></h1>
+<p><b>Traveling For:</b> <%= @trip.trip_type %></p>
+<p><b>Dates:</b> <%= @trip.begin_date.strftime("%B %d, %Y") %> to <%= @trip.end_date.strftime("%B %d, %Y") %></p>
+<p><b>Budget:</b> $<%= @trip.budget %></p>
+<p><b>Description:</b><br><%= @trip.description %></p>
+<p><b>Wish List:</b><br><%= @trip.wish_list %></p>
+
+<form action="/trips/<%= @trip.id %>/edit">
+    <input type="submit" value="Edit This Trip">
+</form><br>
+<%= button_to "Delete this Trip", {controller: :trips, action: "destroy", id: @trip.id }, method: :delete %>
+

@@ -22,7 +22,6 @@ Rails.application.routes.draw do
 
   get "/trips/new", to: "trips#new"
   post "/trips", to: "trips#create"
-  get "/trips", to: "trips#index"
   get "/trips/:id", to: "trips#show"
   get "/trips/:id/edit", to: "trips#edit"
   patch "/trips/:id", to: "trips#update"

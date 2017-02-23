@@ -2,22 +2,22 @@
 <%= form_tag "/users", method: :post do %>
   <div>
     First Name:
-    <input type="text" name="first_name">
+    <input type="text" name="first_name" value="<%= @user.first_name %>">
   </div>
 
   <div>
     Last Name:
-    <input type="text" name="last_name">
+    <input type="text" name="last_name" value="<%= @user.last_name %>">
   </div>
 
   <div>
     Email:
-    <input type="email" name="email">
+    <input type="email" name="email" value="<%= @user.email %>">
   </div>
 
   <div>
     User Name:
-    <input type="text" name="user_name">
+    <input type="text" name="user_name" value="<%= @user.user_name %>">
   </div>
 
   <div>

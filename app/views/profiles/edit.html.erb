@@ -1,5 +1,5 @@
-<h1>Create Your TravelBuddy Profile:</h1>
-<%= form_tag "/profiles", method: :post do %>
+<h1>Edit Your TravelBuddy Profile:</h1>
+<%= form_tag "/profiles/#{@profile.id}", method: :patch do %>
   <div>
     Image Url:
     <input type="text" name="image" value="@profile.image">
@@ -23,5 +23,5 @@
     <textarea name="bio"><%= @profile.bio %></textarea>
   </div>
 
-  <input type="submit" value="Create Profile">
+  <input type="submit" value="Update Profile">
 <% end %>
