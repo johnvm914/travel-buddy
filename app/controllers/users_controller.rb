@@ -23,12 +23,20 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    render "show.html.erb"
+    if @user && (@user.id == current_user.id)
+      render "show.html.erb"
+    else
+      redirect_to "/users/#{current_user.id}"
+    end
   end
 
   def edit
     @user = User.find_by(id: params[:id])
-    render "edit.html.erb"
+    if @user && (@user.id == current_user.id)
+      render "edit.html.erb"
+    else
+      redirect_to "/users/#{current_user.id}"
+    end
   end
 
   def update

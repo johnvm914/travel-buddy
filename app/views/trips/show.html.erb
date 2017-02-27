@@ -5,8 +5,8 @@
 <p><b>Description:</b><br><%= @trip.description %></p>
 <p><b>Wish List:</b><br><%= @trip.wish_list %></p>
 
-<form action="/trips/<%= @trip.id %>/edit">
-    <input type="submit" value="Edit This Trip">
-</form><br>
-<%= button_to "Delete this Trip", {controller: :trips, action: "destroy", id: @trip.id }, method: :delete %>
+<% if @trip.user.id == current_user.id %>
+  <a href="/trips/<%= @trip.id %>/edit"><button>Edit This Trip</button></a><br><br>
+  <%= button_to "Delete This Trip", "/trips/#{@trip.id}", method: :delete %>
+<% end %>
 

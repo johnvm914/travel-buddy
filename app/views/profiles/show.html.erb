@@ -1,11 +1,19 @@
-<h1>Your Profile:</h1>
+<% if @profile.user.id == current_user.id %>
+  <h1>Your Profile:</h1>
+<% else %>
+  <h1><%= @profile.user.user_name %>'s Profile:</h1>
+<% end %>
+
 
 <p><img src=<%= @profile.image %>></p>
-<p>Age: <%= @profile.age %></p>
-<p>Location: <%= @profile.location %></p>
-<p>Bio: <%= @profile.bio %></p>
+<p><b>Name:</b> <%= @profile.user.first_name %> <%= @profile.user.last_name %></p>
+<p><b>Age:</b> <%= @profile.age %></p>
+<p><b>Location:</b> <%= @profile.location %></p>
+<p><b>Bio:</b> <%= @profile.bio %></p>
+<p><b>Contact Email:</b> <%= @profile.user.email %></p>
 
-<form action="/profiles/<%= @profile.id %>/edit">
-    <input type="submit" value="Edit Your Profile">
-</form><br>
-<%= button_to "Delete Your Profile", {controller: :profiles, action: "destroy", id: @profile.id }, method: :delete %>
+<% if @profile.user.id == current_user.id %>
+  <a href="/profiles/<%= @profile.id %>/edit"><button>Edit Your Profile</button></a>
+  <br><br>
+  <%= button_to "Delete Your Profile", "/profiles/#{@profile.id}", method: :delete %>
+<% end %>

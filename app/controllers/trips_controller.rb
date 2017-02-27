@@ -23,7 +23,11 @@ class TripsController < ApplicationController
 
   def edit
     @trip = Trip.find_by(id: params[:id])
-    render "edit.html.erb"
+    if @trip && (@trip.user.id == current_user.id)
+      render "edit.html.erb"
+    else
+      redirect_to "/users/#{current_user.id}"
+    end
   end
 
   def update

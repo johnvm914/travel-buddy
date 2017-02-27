@@ -2,19 +2,19 @@
 <%= form_tag "/profiles/#{@profile.id}", method: :patch do %>
   <div>
     Image Url:
-    <input type="text" name="image" value="@profile.image">
+    <input type="text" name="image" value="<%= @profile.image %>">
   </div>
   <br>
 
   <div>
     Age:
-    <input type="text" name="age" value="@profile.age">
+    <input type="text" name="age" value="<%= @profile.age %>">
   </div>
   <br>
 
   <div>
-    Location(City, State)
-    <input type="text" name="location" value="@profile.location">
+    Location(City, State, Country)
+    <input type="text" name="location" value="<%= @profile.location %>">
   </div>
   <br>
 

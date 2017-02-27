@@ -6,8 +6,15 @@
 </ol>
 
 <h1>My Friends</h1>
-  <ol>
-    <% @user.friends.each do |friend| %>
-      <li><a href="/profiles/<%= friend.id %>"><%= friend.user_name %></a></li>
-    <% end %>
-  </ol>
+<ol>
+  <% @user.friends.each do |friend| %>
+    <li><a href="/profiles/<%= friend.id %>"><%= friend.user_name %></a></li>
+  <% end %>
+</ol>
+
+<% if @user.profile %>
+  <a href="/profiles/<%= @user.profile.id %>"><button>View Your Profile</button></a>
+<% else %>
+  <a href="/profiles/new"><button>Create A Profile</button></a>
+<% end %>
+
