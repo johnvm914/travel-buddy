@@ -1,0 +1,343 @@
+/*------------------------------------------------------------------
+[ header-responsive ]
+-------------------------------------------------------------------*/
+/**
+* Screen max-width: 480px
+**/
+@media screen and (max-width: 480px) {
+  .slicknav_menu > a.slicknav_collapsed:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f0c9";
+    font-size: 14px;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 30px;
+    background: #ffc107;
+  }
+  .slicknav_menu > a.slicknav_open:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f00d";
+    font-size: 14px;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 30px;
+    background: #ffc107;
+  }
+  .slicknav_menu a.slicknav_btn {
+    margin-top: 8%;
+  }
+  .tsp-logo {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 535px) {
+  .slicknav_menu > a {
+    margin-bottom: 15px!important;
+  }
+  .slicknav_menu ul.slicknav_nav {
+    margin-top: 90px!important;
+  }
+}
+/**
+* Screen max-width: 767px
+**/
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .slicknav_menu > a.slicknav_collapsed:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f0c9";
+    font-size: 14px;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 30px;
+    background: #ffc107;
+  }
+  .slicknav_menu > a.slicknav_open:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f00d";
+    font-size: 14px;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 30px;
+    background: #ffc107;
+  }
+  .slicknav_menu a.slicknav_btn {
+    margin-top: 5%;
+  }
+  .slicknav_menu ul.slicknav_nav {
+    margin-top: 80px;
+  }
+  .tsp-logo {
+    margin-bottom: 20px;
+  }
+}
+/**
+* Screen width 768 ~ 991px
+**/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .tsp-header-main {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+  .slicknav_menu > a.slicknav_collapsed:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f0c9";
+    font-size: 20px;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 40px;
+    background: #ffc107;
+  }
+  .slicknav_menu > a.slicknav_open:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f00d";
+    font-size: 20px;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 40px;
+    background: #ffc107;
+  }
+  .slicknav_menu {
+    max-width: 750px;
+    margin: 0 auto!important;
+    position: static!important;
+  }
+  .slicknav_menu > a {
+    margin-top: 3%!important;
+  }
+  .slicknav_menu ul.slicknav_nav {
+    margin-top: 90px;
+  }
+}
+/**
+* Screen max-width: 991px
+**/
+@media screen and (max-width: 991px) {
+  .tsp-header-main {
+    border-top: 3px solid #ffc107;
+    padding-top: 15px;
+  }
+  .tsp-header-main .tsp-logo {
+    z-index: 999;
+  }
+  .tsp-header-main #tsp_menu_cart_search {
+    display: none;
+  }
+  .slicknav_menu {
+    background: none;
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    padding: 0;
+  }
+  .slicknav_menu > a {
+    background: none;
+    padding: 0;
+    margin-top: 3%;
+    z-index: 9999;
+    margin-bottom: 25px;
+  }
+  .slicknav_menu > a span {
+    display: none;
+  }
+  .slicknav_menu ul.slicknav_nav ul {
+    padding: 0;
+    margin: 0;
+  }
+  .slicknav_menu ul.slicknav_nav > li.tsp-has-mega-menu a i {
+    float: right;
+    line-height: 50px;
+    color: #5a5d6b;
+    font-size: 24px;
+  }
+  .slicknav_menu ul.slicknav_nav > li.tsp-has-mega-menu:hover a i {
+    color: #ffc107;
+  }
+  .slicknav_menu ul.slicknav_nav > li.slicknav_parent > a:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f107";
+    font-size: 24px;
+    color: #5a5d6b;
+    float: right;
+    line-height: 50px;
+  }
+  .slicknav_menu ul.slicknav_nav > li > ul > li.slicknav_parent > a:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f067";
+    font-size: 18px;
+    color: #5a5d6b;
+    float: right;
+    line-height: 50px;
+  }
+  .slicknav_menu ul.slicknav_nav > li > ul > li.slicknav_open > a:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f068";
+    font-size: 18px;
+    color: #5a5d6b;
+    float: right;
+    line-height: 50px;
+  }
+  .slicknav_menu ul.slicknav_nav > li.slicknav_open > a {
+    background: #191b26;
+    border-left: 2px solid #ffc107;
+  }
+  .slicknav_menu ul.slicknav_nav > li.slicknav_open > a a {
+    color: #fff;
+    border: none!important;
+  }
+  .slicknav_menu ul.slicknav_nav > li {
+    border: 0;
+  }
+  .slicknav_menu ul.slicknav_nav > li > ul > li.slicknav_open > a {
+    background: #191b26;
+  }
+  .slicknav_menu ul.slicknav_nav > li > a,
+  .slicknav_menu ul.slicknav_nav > li > ul > li > a {
+    text-transform: uppercase;
+  }
+  .slicknav_menu ul.slicknav_nav li a:after {
+    margin-top: -50px;
+  }
+  .slicknav_menu ul.slicknav_nav li.tsp-search-xs {
+    padding: 0 20px 25px 20px;
+  }
+  .slicknav_menu ul.slicknav_nav li.tsp-search-xs form {
+    position: relative;
+  }
+  .slicknav_menu ul.slicknav_nav li.tsp-search-xs form input {
+    width: 100%;
+    padding: 2px 25px;
+    border: 1px solid #9a9a9a;
+    background: transparent;
+    color: #000000;
+  }
+  .slicknav_menu ul.slicknav_nav li.tsp-search-xs form button {
+    position: absolute;
+    top: 0;
+    background: none;
+    border: 0;
+    color: #ffc107;
+  }
+  .slicknav_menu ul.slicknav_nav {
+    background: #222533;
+  }
+  .slicknav_menu ul.slicknav_nav li {
+    border-bottom: 1px solid #1e212e;
+  }
+  .slicknav_menu ul.slicknav_nav li a {
+    color: #ffffff;
+    padding: 0 20px;
+    line-height: 50px;
+    margin: 0;
+    font-family: 'Patua One', cursive;
+  }
+  .slicknav_menu ul.slicknav_nav li a:hover {
+    background: #191b26;
+    color: #ffc107;
+    border-radius: 0;
+    border-left: 2px solid #ffc107;
+  }
+  .slicknav_menu ul.slicknav_nav li a:hover:after {
+    color: #ffc107;
+  }
+  .slicknav_menu ul.slicknav_nav li a span {
+    display: none;
+  }
+  .slicknav_menu ul.slicknav_nav li a a {
+    padding: 0;
+    display: block;
+    border: none!important;
+  }
+  .slicknav_menu ul.slicknav_nav li a a:hover {
+    background: none;
+  }
+  .slicknav_menu ul.slicknav_nav li ul > li a {
+    padding-left: 30px;
+  }
+  .slicknav_menu ul.slicknav_nav li ul > li a a {
+    padding-left: 0px;
+  }
+  .slicknav_menu ul.slicknav_nav li ul > li ul li a {
+    font-style: italic;
+  }
+  .slicknav_menu ul.slicknav_nav img,
+  .slicknav_menu ul.slicknav_nav p {
+    display: none;
+  }
+}
+/**
+* Screen min-width: 992px
+**/
+@media screen and (min-width: 992px) {
+  .slicknav_menu {
+    display: none;
+  }
+  .tsp-header-main {
+    height: 99px;
+  }
+  .tsp-header-main #tsp_menu_cart_search {
+    padding-right: 0;
+  }
+  .tsp-header-main .tsp-logo {
+    padding-left: 0px;
+  }
+}
+/**
+* Screen width 992 ~ 1199px
+**/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  #tsp_menu_cart_search nav > ul > li > a {
+    font-size: 16px!important;
+  }
+  #tsp_menu_cart_search nav > ul > li {
+    margin-left: 58px!important;
+  }
+}
+/**
+* Screen min min width 1200px
+**/

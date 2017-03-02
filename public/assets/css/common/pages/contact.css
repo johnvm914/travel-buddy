@@ -1,0 +1,62 @@
+/*------------------------------------------------------------------
+[ Contact pages]
+-------------------------------------------------------------------*/
+.tsp-content-contact-page {
+  padding: 95px 0;
+}
+@media screen and (max-width: 991px) {
+  .tsp-content-contact-page {
+    padding: 50px 0;
+  }
+}
+.tsp-content-contact-page form {
+  padding-right: 95px;
+}
+@media screen and (max-width: 991px) {
+  .tsp-content-contact-page form {
+    padding: 0;
+  }
+}
+.tsp-content-contact-page form input,
+.tsp-content-contact-page form textarea {
+  border: 1px solid #d6dde2;
+}
+.tsp-content-contact-page form input[type=submit] {
+  margin-top: 15px;
+  width: 170px;
+  height: 44px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  border: 1px solid #ffc107;
+  font-weight: 600;
+  background: #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-content-contact-page form input[type=submit]:hover {
+  color: #ffc107;
+  background: #ffffff;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-content-contact-page .tsp-content h3.title {
+  font-size: 30px;
+  color: #333333;
+  font-family: 'Patua One', cursive;
+  margin-bottom: 20px;
+}
+.tsp-content-contact-page .tsp-content section h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 600;
+  margin-bottom: 18px;
+  margin-top: 25px;
+}
+.tsp-content-contact-page .tsp-content section .tsp-content-detail {
+  color: #666666;
+}

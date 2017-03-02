@@ -1,0 +1,66 @@
+/*------------------------------------------------------------------
+[ login]
+-------------------------------------------------------------------*/
+.tsp-page-acc {
+  display: table;
+  width: 100%;
+}
+.tsp-page-acc h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #333333;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-family: 'Patua One', cursive;
+}
+.tsp-page-acc p {
+  text-transform: none;
+  font-size: 14px;
+  color: #666666;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
+.tsp-page-acc a,
+.tsp-page-acc button {
+  font-size: 14px;
+  color: #333333;
+}
+.tsp-page-acc .tsp-nav-register .tsp-content,
+.tsp-page-acc .tsp-des-travel .tsp-content {
+  padding-right: 15px;
+}
+.tsp-page-acc .tsp-nav-register p,
+.tsp-page-acc .tsp-des-travel p {
+  border-bottom: 1px solid #eeeeee;
+  padding: 15px 0 25px 0;
+  margin-bottom: 25px;
+}
+.tsp-page-acc .tsp-nav-register a,
+.tsp-page-acc .tsp-des-travel a {
+  padding: 15px 20px;
+}
+.tsp-page-acc .tsp-form-login p {
+  padding: 15px 0 35px 0;
+}
+.tsp-page-acc .tsp-form-login button {
+  padding: 0 30px;
+  line-height: 50px;
+  float: right;
+  margin-top: 15px;
+}
+@media screen and (max-width: 600px) {
+  .tsp-page-acc {
+    text-align: center;
+  }
+  .tsp-page-acc h2,
+  .tsp-page-acc p {
+    text-align: left;
+  }
+  .tsp-page-acc a,
+  .tsp-page-acc button {
+    float: none!important;
+  }
+  .tsp-nav-register {
+    margin-bottom: 20px;
+  }
+}

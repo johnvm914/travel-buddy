@@ -1,0 +1,103 @@
+/*------------------------------------------------------------------
+[widget]
+-------------------------------------------------------------------*/
+.tsp-widget-blog aside {
+  margin-bottom: 65px;
+}
+.tsp-widget {
+  clear: both;
+}
+.tsp-widget-search input {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #eeeeee;
+  padding: 0 20px;
+  color: #666666;
+}
+h2.widget-title {
+  font-size: 18px;
+  font-family: 'Patua One', cursive;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+.tsp-widget-blog-cat ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid #dee5e9!important;
+}
+.tsp-widget-blog-cat ul li a {
+  font-size: 14px;
+  color: #000000;
+}
+.tsp-widget-blog-cat ul li a:hover {
+  color: #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-widget-blog-cat ul li span {
+  float: right;
+}
+.tsp-widget-flickr .tsp-image-flickr {
+  padding-top: 10px;
+}
+.tsp-widget-flickr .tsp-image-flickr li {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  position: relative;
+}
+.tsp-widget-flickr .tsp-image-flickr li:hover:before {
+  opacity: 1;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-widget-flickr .tsp-image-flickr li:hover .overlay {
+  opacity: 1;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-widget-flickr .tsp-image-flickr li:before {
+  position: absolute;
+  top: 40%;
+  content: "\f067";
+  font-family: "FontAwesome";
+  z-index: 9;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.tsp-widget-flickr .tsp-image-flickr li .overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  background: rgba(255, 193, 7, 0.8);
+  opacity: 0;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-widget-tags .tags {
+  padding-top: 15px;
+}
+.tsp-widget-tags .tags a {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #eeeeee;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+.tsp-widget-tags .tags a:hover {
+  background: #ffc107;
+}

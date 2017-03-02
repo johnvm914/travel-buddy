@@ -1,0 +1,58 @@
+/*------------------------------------------------------------------
+[ payment success ]
+-------------------------------------------------------------------*/
+#tsp_payment_success {
+  text-align: center;
+}
+#tsp_payment_success h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #ffc107;
+  font-weight: 500;
+  font-family: 'Patua One', cursive;
+  letter-spacing: 0.3px;
+  margin-bottom: 30px;
+}
+#tsp_payment_success p {
+  text-transform: none;
+  font-size: 14px;
+  color: #666666;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+.tsp-btn-site {
+  background: #ffc107;
+  border: 1px solid #ffc107;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 60px;
+  padding: 16px 58px;
+  text-transform: uppercase;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-btn-site:hover {
+  background: transparent;
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+@media screen and (max-width: 600px) {
+  #tsp_payment_success img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #tsp_payment_success {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  #tsp_payment_success {
+    padding-bottom: 50px;
+  }
+}

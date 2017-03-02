@@ -1,0 +1,45 @@
+/*------------------------------------------------------------------
+[ Pagination ]
+-------------------------------------------------------------------*/
+.tsp-pagination {
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+.tsp-pagination ul li {
+  display: inline-block;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #666666;
+  margin: 0 5px 5px 0;
+}
+@media screen and (max-width: 600px) {
+  .tsp-pagination ul li {
+    width: 30px;
+    line-height: 30px;
+  }
+}
+.tsp-pagination ul li a {
+  font-size: 14px;
+  color: #666666;
+  display: block;
+  background: #ccc;
+  border: 1px solid #ccc;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-pagination ul li a:hover {
+  background: #ffc107;
+  color: #ffffff;
+  border: 1px solid #ffc107;
+}
+.tsp-pagination ul .active-pagination a {
+  background: #ffc107;
+  color: #ffffff;
+  border: 1px solid #ffc107;
+}
+.tsp-gallery-pagination {
+  margin-top: 30px;
+}

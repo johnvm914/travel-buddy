@@ -1,0 +1,65 @@
+/*------------------------------------------------------------------
+[Comment ]
+-------------------------------------------------------------------*/
+.tsp-common .tsp-common-item {
+  padding: 50px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.tsp-common .tsp-common-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+  margin: 15px 70px 0 0;
+}
+.tsp-common .tsp-common-item .tsp-content-common {
+  display: table;
+}
+.tsp-common .tsp-common-item .tsp-content-common h3 {
+  margin-top: 0;
+}
+.tsp-common .tsp-common-item .tsp-content-common h3 a {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #333333;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  font-family: 'Patua One', cursive;
+}
+.tsp-common .tsp-common-item .tsp-content-common .tsp-meta-rate {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.tsp-common .tsp-common-item .tsp-content-common .tsp-meta-rate > span {
+  text-transform: none;
+  font-size: 14px;
+  color: #666666;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+.tsp-common .tsp-common-item .tsp-content-common .tsp-meta-rate .tsp-star-rating {
+  margin: 0;
+}
+.tsp-common .tsp-common-item .tsp-content-common p {
+  text-transform: none;
+  font-size: 14px;
+  color: #666666;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
+@media screen and (max-width: 600px) {
+  .tsp-common-item {
+    text-align: center;
+    padding: 30px 15px!important;
+  }
+  .tsp-common-item img {
+    float: none!important;
+    margin: 0 auto!important;
+  }
+  .tsp-common-item .tsp-content-common {
+    display: table !important;
+    width: 100% !important;
+    text-align: justify;
+  }
+}

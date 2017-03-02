@@ -1,0 +1,91 @@
+/*------------------------------------------------------------------
+[ Breadcumb ]
+-------------------------------------------------------------------*/
+.tsp-title-breadcrumb {
+  background: url(http://placehold.it/1920x226);
+  background-size: cover;
+}
+.tsp-title-breadcrumb .tsp-title h1 {
+  text-transform: uppercase;
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  margin-top: 0;
+}
+@media screen and (max-width: 1199px) {
+  .tsp-title-breadcrumb .tsp-title h1 {
+    font-size: 25px;
+  }
+}
+.tsp-title-breadcrumb .tsp-title h1 span {
+  color: #ffc107;
+}
+.tsp-title-breadcrumb .tsp-title .tsp-description p,
+.tsp-title-breadcrumb .tsp-title .tsp-description .tsp-star-rating {
+  display: inline-block;
+}
+.tsp-title-breadcrumb .tsp-title .tsp-description p {
+  color: #ffffff;
+  padding-right: 25px;
+}
+.tsp-title-breadcrumb .tsp-title .tsp-description p i {
+  color: #ffc107;
+  padding-right: 5px;
+}
+.tsp-title-breadcrumb .tsp-breadcumb.tsp-breadcrumb-description {
+  padding: 25px 0;
+}
+.tsp-title-breadcrumb .tsp-breadcumb {
+  text-align: right;
+  padding: 10px 0;
+}
+.tsp-title-breadcrumb .tsp-breadcumb ul li {
+  display: inline-block;
+  color: #ffffff;
+}
+.tsp-title-breadcrumb .tsp-breadcumb ul li a,
+.tsp-title-breadcrumb .tsp-breadcumb ul li span {
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  padding: 0 15px;
+}
+.tsp-title-breadcrumb .tsp-breadcumb ul li a:hover {
+  color: #ffc107;
+}
+.tsp-title-breadcrumb .tsp-breadcumb ul li span {
+  color: #ffc107;
+  padding-right: 0;
+}
+@media screen and (min-width: 992px) {
+  .tsp-title-breadcrumb {
+    padding: 75px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .tsp-title-breadcrumb {
+    padding: 40px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .tsp-title-breadcrumb {
+    padding: 20px 0;
+  }
+  .tsp-title-breadcrumb .tsp-title .tsp-star-rating {
+    margin: 5px 0;
+  }
+  .tsp-title-breadcrumb .tsp-breadcumb {
+    text-align: left !important;
+    padding: 10px 0;
+  }
+  .tsp-title-breadcrumb .tsp-breadcumb ul {
+    padding: 0 15px;
+  }
+  .tsp-title-breadcrumb .tsp-breadcumb ul li a,
+  .tsp-title-breadcrumb .tsp-breadcumb ul li span {
+    padding: 0 5px;
+  }
+}

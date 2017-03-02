@@ -1,0 +1,89 @@
+/*------------------------------------------------------------------
+[ Our Blog]
+-------------------------------------------------------------------*/
+#tsp_our_blog_list_home {
+  padding: 95px 0;
+}
+.shortcode-our-blog-warpper {
+  background-image: url(http://placehold.it/1920x600);
+}
+.shortcode-our-blog .our-blog-shortcode-item {
+  border: 2px solid #f8f8f8;
+  overflow: hidden;
+  box-shadow: 5px 5px 22px -15px #666666;
+  margin-bottom: 30px;
+  background: #ffffff;
+}
+.shortcode-our-blog .our-blog-shortcode-item img {
+  float: left;
+  width: auto;
+}
+.shortcode-our-blog .our-blog-shortcode-item .info-summary-blog {
+  display: table;
+  padding: 30px;
+}
+.shortcode-our-blog .our-blog-shortcode-item .info-summary-blog h3 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.shortcode-our-blog .our-blog-shortcode-item .info-summary-blog h3 a {
+  color: #333333;
+  font-family: 'Patua One', cursive;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.shortcode-our-blog .our-blog-shortcode-item .info-summary-blog p {
+  color: #333333;
+  margin-bottom: 18px;
+}
+.shortcode-our-blog .our-blog-shortcode-item .info-summary-blog .read-more {
+  text-align: right;
+}
+.shortcode-our-blog .our-blog-shortcode-item .info-summary-blog .read-more a {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #333333;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.shortcode-our-blog .our-blog-shortcode-item .info-summary-blog .read-more a:hover {
+  color: #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.shortcode-our-blog .our-blog-shortcode-item:hover {
+  border: 2px solid #ffc107;
+}
+.shortcode-our-blog .our-blog-shortcode-item:hover h3 a {
+  color: #ffc107;
+}
+.shortcode-our-blog .owl-nav {
+  display: none;
+}
+.shortcode-our-blog .owl-dots .owl-dot.active span {
+  background: #ffc107;
+}
+.shortcode-our-blog .owl-dots .owl-dot:hover span {
+  background: #ffc107;
+}
+.shortcode-our-blog .owl-dots .owl-dot span {
+  border: 1px solid #ffc107;
+  background: transparent;
+}
+@media screen and (max-width: 991px) {
+  .shortcode-our-blog .our-blog-shortcode-item img {
+    float: none!important;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .shortcode-our-blog .our-blog-shortcode-item {
+    margin: 0 15px 15px 15px;
+  }
+}

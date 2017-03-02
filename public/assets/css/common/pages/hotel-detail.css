@@ -1,0 +1,338 @@
+/*------------------------------------------------------------------
+[ Hotel detail]
+-------------------------------------------------------------------*/
+.tsp-hotel-detail-tpl {
+  padding-bottom: 0;
+}
+.tsp-box-slideshow {
+  position: relative;
+}
+.tsp-box-slideshow .ps-current img {
+  margin: 0!important;
+  width: 100%;
+  height: 600px;
+}
+.tsp-box-slideshow .ps-caption,
+.tsp-box-slideshow b {
+  display: none;
+}
+.tsp-box-slideshow ul span,
+.tsp-box-slideshow ul b {
+  display: none;
+}
+.tsp-box-slideshow ul.ps-list {
+  z-index: 9;
+  position: absolute;
+  top: 55px;
+  left: 30px;
+  height: 490px;
+  overflow: hidden;
+}
+.tsp-box-slideshow ul.ps-list li {
+  width: 100%!important;
+  margin-bottom: 30px;
+  opacity: 1!important;
+}
+.tsp-box-slideshow ul.ps-list li img {
+  border: 1px solid #ffffff;
+}
+.tsp-hotel-slide .tsp-price-hotel-item {
+  position: absolute;
+  bottom: 110px;
+  right: 30px;
+  padding: 35px 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+}
+.tsp-hotel-slide .tsp-price-hotel-item .tsp-price {
+  text-transform: uppercase;
+  font-size: 36px;
+  color: #333333;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.tsp-hotel-slide .tsp-price-hotel-item .tsp-price span {
+  font-size: 14px;
+}
+.tsp-hotel-slide .tsp-price-hotel-item button {
+  background: #ffc107;
+  border: 1px solid #ffc107;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 50px;
+  padding: 0 20px;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-hotel-slide .tsp-price-hotel-item button:hover {
+  background: #ffffff;
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+.tsp-nav-hotel-detail {
+  margin-top: 20px;
+}
+.tsp-nav-hotel-detail ul {
+  border-bottom: 3px solid #eeeeee;
+}
+.tsp-nav-hotel-detail ul li {
+  display: inline-block;
+  margin-left: -5px;
+}
+.tsp-nav-hotel-detail ul li:first-child {
+  margin: 0;
+}
+.tsp-nav-hotel-detail ul li a {
+  padding: 0 35px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #666666;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  line-height: 45px;
+  display: block;
+  position: relative;
+  top: 3px;
+}
+.tsp-nav-hotel-detail ul li a.active,
+.tsp-nav-hotel-detail ul li a:hover {
+  color: #333333;
+  border-bottom: 3px solid #ffc107;
+}
+.tsp-content-hotel-detail h2 {
+  margin-bottom: 30px;
+}
+.tsp-content-hotel-detail .tsp-content {
+  text-transform: none;
+  font-size: 14px;
+  color: #333333;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
+.tsp-content-hotel-detail .tsp-description-service {
+  display: table;
+  width: 100%;
+  margin-top: 45px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+.tsp-content-hotel-detail .tsp-description-service .tsp-service-hotel ul li {
+  padding-left: 20px;
+  margin-bottom: 30px;
+  text-transform: none;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.tsp-content-hotel-detail .tsp-description-service .tsp-service-hotel ul li i {
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #ffc107;
+  color: #ffffff;
+  margin-right: 50px;
+}
+#reviews h2 {
+  margin-bottom: 35px;
+}
+#reviews .tsp-content-review {
+  display: table;
+  width: 100%;
+}
+#reviews .tsp-content-review .tsp-rating-hotel .tsp-rating-item {
+  display: table;
+  width: 100%;
+}
+#reviews .tsp-content-review .tsp-rating-hotel .tsp-rating-item h3,
+#reviews .tsp-content-review .tsp-rating-hotel .tsp-rating-item .tsp-star-rating {
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+#reviews .tsp-content-review .tsp-rating-hotel .tsp-rating-item h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #333333;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  margin-top: 15px;
+}
+#reviews .tsp-content-review .tsp-rating-hotel .tsp-rating-item .tsp-star-rating {
+  margin: 13px 0;
+}
+#reviews .tsp-content-review .tsp-rating-total-hotel {
+  background: url(http://placehold.it/370x145);
+  background-size: cover;
+  padding: 22px 25px;
+  margin-top: 15px;
+}
+#reviews .tsp-content-review .tsp-rating-total-hotel .tsp-proportion-rate {
+  width: 105px;
+  float: left;
+  display: block;
+  border-right: 1px solid #ffffff;
+  line-height: 95px;
+  text-transform: uppercase;
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+#reviews .tsp-content-review .tsp-rating-total-hotel .tsp-detail-proportion {
+  width: 210px;
+  text-align: center;
+  float: right;
+}
+#reviews .tsp-content-review .tsp-rating-total-hotel .tsp-detail-proportion h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
+#reviews .tsp-content-review .tsp-rating-total-hotel .tsp-detail-proportion .tsp-star-rating,
+#reviews .tsp-content-review .tsp-rating-total-hotel .tsp-detail-proportion .tsp-star-rating span {
+  color: #ffffff;
+}
+#reviews .tsp-content-review .tsp-rating-total-hotel .tsp-detail-proportion p {
+  text-transform: none;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
+#location .tsp-map-horizontal {
+  padding: 45px 0 60px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+#related_hotel h2,
+#location h2 {
+  margin-top: 25px;
+}
+#related_hotel .tsp-hotel-relate {
+  display: table;
+  width: 100%;
+  padding: 45px 0 60px 0;
+  border-bottom: 1px solid #eeeeee;
+  border: 0;
+}
+.ps-list {
+  position: relative;
+}
+.ps-list .owl-nav {
+  position: absolute;
+  top: 0;
+}
+.tsp-nav-slide-show {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  width: 70px;
+  height: 90%;
+  text-align: center;
+}
+.tsp-nav-slide-show .tsp-next,
+.tsp-nav-slide-show .tsp-pre {
+  width: 100%;
+  line-height: 20px;
+  background: rgba(246, 241, 237, 0.7);
+  color: #ffc107;
+  cursor: pointer;
+}
+.tsp-nav-slide-show .tsp-next:hover,
+.tsp-nav-slide-show .tsp-pre:hover {
+  background: rgba(255, 193, 7, 0.7);
+  color: #ffffff;
+}
+.tsp-nav-slide-show .tsp-next {
+  position: absolute;
+  top: 100%;
+}
+@media screen and (min-width: 1200px) {
+  #related_hotel .tsp-hotel-relate article {
+    margin: 0 0 15px 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .tsp-rating-total-hotel .tsp-proportion-rate {
+    width: 35% !important;
+  }
+  .tsp-rating-total-hotel .tsp-detail-proportion {
+    width: 65% !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .tsp-box-slideshow .owl-nav {
+    display: none;
+  }
+  .tsp-box-slideshow .ps-list {
+    width: 170px;
+  }
+  .tsp-box-slideshow .ps-list .owl-item {
+    width: 170px!important;
+  }
+  .tsp-box-slideshow .ps-list .owl-item li {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .tsp-rating-total-hotel .tsp-proportion-rate {
+    font-size: 30px!important;
+  }
+  .tsp-rating-total-hotel .tsp-detail-proportion h3 {
+    font-size: 25px!important;
+  }
+  .tsp-nav-hotel-detail ul li a {
+    font-size: 16px!important;
+    padding: 0 10px;
+  }
+  .tsp-box-slideshow .tsp-nav-slide-show,
+  .tsp-box-slideshow .ps-current {
+    display: none;
+  }
+  .ps-list {
+    position: static!important;
+  }
+  .tsp-box-slideshow .owl-nav {
+    display: block;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+  }
+  .tsp-box-slideshow .owl-nav .owl-prev,
+  .tsp-box-slideshow .owl-nav .owl-next {
+    border-radius: 50%;
+  }
+  .tsp-box-slideshow .owl-nav .owl-prev:hover,
+  .tsp-box-slideshow .owl-nav .owl-next:hover {
+    background: #ffc107;
+  }
+  .tsp-box-slideshow .owl-nav .owl-prev {
+    float: left;
+  }
+  .tsp-box-slideshow .owl-nav .owl-next {
+    float: right;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .tsp-description-service .tsp-service-hotel:nth-child(3) {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #tsp_hotel_detail section .tsp-box-hotel-content {
+    padding: 0 15px;
+  }
+  .tsp-price-hotel-item {
+    right: 0!important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .tsp-hotel-relate article {
+    padding: 0;
+  }
+}

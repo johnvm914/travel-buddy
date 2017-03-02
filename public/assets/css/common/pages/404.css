@@ -1,0 +1,34 @@
+/*------------------------------------------------------------------
+[ 404 ]
+-------------------------------------------------------------------*/
+#tsp_404 {
+  text-align: center;
+}
+#tsp_404 .tsp-content-box h2 {
+  text-transform: uppercase;
+  font-size: 150px;
+  color: #333333;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  font-family: 'Patua One', cursive;
+  margin-bottom: 0;
+}
+#tsp_404 .tsp-content-box .tsp-sub-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #666666;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+#tsp_404 .tsp-content-box .tsp-description {
+  text-transform: none;
+  font-size: 16px;
+  color: #333333;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
+#tsp_404 .tsp-content-box .tsp-btn-nav {
+  display: table;
+  width: 100%;
+  margin: 85px 0 10px 0;
+}

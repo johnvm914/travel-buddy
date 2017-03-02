@@ -1,0 +1,70 @@
+/*------------------------------------------------------------------
+[ Register]
+-------------------------------------------------------------------*/
+.tsp-des-travel img {
+  max-width: 100%;
+}
+.tsp-form-register h2 {
+  margin-bottom: 25px;
+}
+.tsp-form-register form .form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+.tsp-form-register form .form-group input {
+  font-style: normal;
+}
+.tsp-form-register form .form-group i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #666666;
+  line-height: 50px;
+  padding: 0 20px;
+}
+.tsp-form-register form .tsp-capcha,
+.tsp-form-register form .tsp-form-remember {
+  display: table;
+  width: 100%;
+}
+.tsp-form-register form .tsp-capcha span,
+.tsp-form-register form .tsp-capcha input {
+  float: left;
+}
+.tsp-form-register form .tsp-capcha span {
+  width: 30%;
+  line-height: 50px;
+  background: #eeeeee;
+  margin-right: 5%;
+  text-align: right;
+  padding-right: 25px;
+  font-weight: 600;
+}
+.tsp-form-register form .tsp-capcha input {
+  width: 60%;
+  margin-left: 5%;
+}
+.tsp-form-register form .tsp-form-remember {
+  margin-bottom: 20px;
+}
+.tsp-form-register form .tsp-form-remember input {
+  display: inline-block;
+}
+.tsp-form-register form .tsp-form-remember label {
+  text-transform: none;
+  font-size: 14px;
+  color: #333333;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+.tsp-form-register form button {
+  padding: 0 30px;
+  line-height: 50px;
+}
+@media screen and (max-width: 767px) {
+  .tsp-capcha span {
+    padding: 0 5px!important;
+    text-align: center!important;
+  }
+}

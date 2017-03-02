@@ -1,0 +1,129 @@
+/*------------------------------------------------------------------
+[ Our Testimonials]
+-------------------------------------------------------------------*/
+#tsp_testimonial_list {
+  padding-top: 95px;
+}
+#tsp_testimonial_list:hover .owl-nav {
+  display: block;
+}
+.our-testimonials-wrapper {
+  background-image: url(http://placehold.it/1920x708);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.our-testimonials-wrapper .our-testimonials {
+  position: relative;
+  margin-bottom: 100px;
+}
+.our-testimonials-wrapper .our-testimonials .our-testimonials-item {
+  text-align: center;
+  background: #ffffff;
+  padding: 90px 55px 49px 55px;
+  border: 12px solid #ffffff;
+  box-shadow: 0px 0px 4px 3px rgba(102, 102, 102, 0.37);
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.our-testimonials-wrapper .our-testimonials .our-testimonials-item:hover {
+  border: 12px solid #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.our-testimonials-wrapper .our-testimonials .our-testimonials-item img {
+  width: auto;
+  border-radius: 100%;
+  display: inline-block;
+  border: 2px solid #eeeeee;
+}
+.our-testimonials-wrapper .our-testimonials .our-testimonials-item .info-summary-testimonial h3 {
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+.our-testimonials-wrapper .our-testimonials .our-testimonials-item .info-summary-testimonial h3 a {
+  font-size: 16px;
+  font-family: 'Patua One', cursive;
+  text-transform: uppercase;
+  color: #333333;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 300;
+}
+.our-testimonials-wrapper .our-testimonials .our-testimonials-item .info-summary-testimonial h3 a:hover {
+  color: #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.our-testimonials-wrapper .our-testimonials .our-testimonials-item .info-summary-testimonial .testimonial-rated i {
+  color: #ffc107;
+}
+.our-testimonials-wrapper .our-testimonials .our-testimonials-item .info-summary-testimonial p {
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+.our-testimonials-wrapper .our-testimonials .owl-dot {
+  display: none;
+}
+.our-testimonials-wrapper .our-testimonials .owl-nav {
+  display: none;
+  position: absolute;
+  top: 42%;
+  width: 100%;
+}
+.our-testimonials-wrapper .our-testimonials .owl-nav .owl-prev {
+  position: absolute;
+  left: -5%;
+  font-size: 0px;
+  background: transparent;
+}
+.our-testimonials-wrapper .our-testimonials .owl-nav .owl-prev:before {
+  color: #000000;
+  font-size: 14px;
+  content: "\f060";
+  font-family: 'FontAwesome';
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.our-testimonials-wrapper .our-testimonials .owl-nav .owl-prev:hover {
+  background: transparent;
+}
+.our-testimonials-wrapper .our-testimonials .owl-nav .owl-prev:hover:before {
+  color: #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.our-testimonials-wrapper .our-testimonials .owl-nav .owl-next {
+  background: transparent;
+  font-size: 0px;
+  position: absolute;
+  right: -5%;
+}
+.our-testimonials-wrapper .our-testimonials .owl-nav .owl-next:before {
+  color: #000000;
+  font-size: 14px;
+  content: "\f061";
+  font-family: 'FontAwesome';
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.our-testimonials-wrapper .our-testimonials .owl-nav .owl-next:hover {
+  background: transparent;
+}
+.our-testimonials-wrapper .our-testimonials .owl-nav .owl-next:hover:before {
+  color: #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 600px) {
+  .our-testimonials-wrapper .our-testimonials-item {
+    margin: 0 15px;
+  }
+}

@@ -1,0 +1,338 @@
+/*------------------------------------------------------------------
+[ Blog ]
+-------------------------------------------------------------------*/
+.blog-item {
+  margin-bottom: 95px;
+}
+.blog-item:nth-child(7),
+.blog-item:nth-child(8) {
+  margin-bottom: 50px;
+}
+.blog-item .entry-image {
+  position: relative;
+}
+.blog-item .entry-image:hover .mask {
+  opacity: 1;
+  webkit-transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.blog-item .entry-image:hover .mask .button-action a.link {
+  left: 42%;
+  webkit-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.blog-item .entry-image:hover .mask .button-action a.light-box {
+  right: 42%;
+  webkit-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.blog-item .entry-image iframe {
+  width: 100%;
+  height: 399px;
+}
+.blog-item .entry-image img {
+  width: 100%;
+}
+.blog-item .entry-image .mask {
+  position: absolute;
+  opacity: 0;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+.blog-item .entry-image .mask .button-action a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 100%;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  position: absolute;
+  top: 38%;
+}
+.blog-item .entry-image .mask .button-action a:hover {
+  background: #ffc107;
+  border: 1px solid #ffc107;
+}
+.blog-item .entry-image .mask .button-action a.link {
+  left: 25%;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.blog-item .entry-image .mask .button-action a.light-box {
+  right: 25%;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.blog-item .entry-image .mask .mask-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.blog-item .entry-image .mask .mask-content h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.blog-item .entry-image .mask .mask-content p {
+  font-size: 14px;
+}
+.blog-item .entry-image .owl-carousel {
+  z-index: auto;
+}
+.blog-item .entry-image .owl-dots {
+  display: none;
+}
+.blog-item .entry-image .owl-nav {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+.blog-item .entry-image .owl-nav .owl-prev {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 0px;
+  background: #ffffff;
+  z-index: 10;
+  padding: 0;
+}
+.blog-item .entry-image .owl-nav .owl-prev:before {
+  content: "\f104";
+  font-family: 'FontAwesome';
+  font-size: 18px;
+  color: #000000;
+}
+.blog-item .entry-image .owl-nav .owl-prev:hover {
+  background: #ffc107;
+}
+.blog-item .entry-image .owl-nav .owl-prev:hover:before {
+  color: #ffffff;
+}
+.blog-item .entry-image .owl-nav .owl-next {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 0px;
+  background: #ffffff;
+  z-index: 10;
+  padding: 0;
+}
+.blog-item .entry-image .owl-nav .owl-next:before {
+  content: "\f105";
+  font-family: 'FontAwesome';
+  font-size: 18px;
+  color: #000000;
+}
+.blog-item .entry-image .owl-nav .owl-next:hover {
+  background: #ffc107;
+}
+.blog-item .entry-image .owl-nav .owl-next:hover:before {
+  color: #ffffff;
+}
+.blog-item .entry-quote {
+  background: #ffc107;
+  color: #ffffff;
+  font-size: 24px;
+}
+.blog-item .entry-quote p {
+  font-family: 'Patua One', cursive;
+  font-weight: 300;
+  padding: 40px 30px;
+  line-height: 45px;
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 767px) {
+  .blog-item .entry-quote p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+.blog-item .entry-quote .extra {
+  border-top: 1px solid #ecf0f1;
+  padding: 15px 30px;
+  line-height: 16px;
+}
+.blog-item .entry-quote .extra a.domain {
+  font-size: 14px;
+  color: #ffffff;
+  display: inline-block;
+}
+.blog-item .entry-quote .extra a.domain:hover {
+  color: #acacac;
+}
+.blog-item .entry-quote .extra a.icon-link {
+  font-size: 18px;
+  color: #ffffff;
+  float: right;
+  display: inline-block;
+}
+.blog-item .entry-quote .extra a.icon-link:hover {
+  color: #acacac;
+}
+.blog-item .entry-title {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.blog-item .entry-title a {
+  font-family: 'Patua One', cursive;
+  color: #000000;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.blog-item .entry-title a:hover {
+  color: #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.blog-item .post-meta {
+  margin-bottom: 25px;
+}
+.blog-item .post-meta div {
+  display: inline-block;
+  font-family: 'Patua One', cursive;
+  margin-right: 35px;
+}
+.blog-item .post-meta div i {
+  margin-right: 10px;
+}
+.content-blog-sidebar .blog-item .entry-image:hover .mask .button-action a.link {
+  left: 44%;
+}
+.content-blog-sidebar .blog-item .entry-image:hover .mask .button-action a.light-box {
+  right: 44%;
+}
+.content-blog-sidebar .blog-item .entry-title {
+  margin-bottom: 10px;
+}
+.content-blog-sidebar .blog-item .post-meta-with-sidebar {
+  margin-bottom: 25px;
+}
+.content-blog-sidebar .blog-item .post-meta-with-sidebar div {
+  display: inline-block;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid #666666;
+  font-family: 'Patua One', cursive;
+  color: #666666;
+}
+.content-blog-sidebar .blog-item .post-meta-with-sidebar .share-this-post {
+  border: none;
+}
+.content-blog-sidebar .blog-item .post-meta-with-sidebar .author a {
+  font-family: 'Patua One', cursive;
+  color: #666666;
+}
+.content-blog-sidebar .blog-item .post-meta-with-sidebar .author a:hover {
+  color: #ffc107;
+}
+.content-blog-sidebar .blog-item .post-excerpt {
+  color: #333333;
+}
+.content-blog-sidebar .blog-item a.read-more {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  background: #ffc107;
+  color: #000000;
+  margin-top: 25px;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.content-blog-sidebar .blog-item a.read-more:hover {
+  color: #ffffff;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .blog-item .entry-image:hover .mask .button-action a.light-box {
+    right: 40%;
+  }
+  .blog-item .entry-image:hover .mask .button-action a.link {
+    left: 40%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .content-blog-sidebar .blog-item .entry-image:hover .mask .button-action a.light-box {
+    right: 42%;
+  }
+  .content-blog-sidebar .blog-item .entry-image:hover .mask .button-action a.link {
+    left: 42%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .blog-item .entry-image:hover .mask .button-action a.light-box {
+    right: 40%;
+  }
+  .blog-item .entry-image:hover .mask .button-action a.link {
+    left: 40%;
+  }
+  .blog-item .owl-nav .owl-prev,
+  .blog-item .owl-nav .owl-next {
+    width: 25px!important;
+    height: 25px!important;
+    line-height: 25px!important;
+  }
+}
+@media screen and (max-width: 560px) {
+  .content-blog-sidebar .blog-item .entry-image:hover .mask .button-action a.light-box {
+    right: 40%;
+  }
+  .content-blog-sidebar .blog-item .entry-image:hover .mask .button-action a.link {
+    left: 40%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .blog-item .entry-image:hover .mask .button-action a.light-box {
+    right: 38%;
+  }
+  .blog-item .entry-image:hover .mask .button-action a.link {
+    left: 38%;
+  }
+  .blog-item .entry-image:hover .mask .button-action a.light-box {
+    right: 38%!important;
+  }
+  .blog-item .entry-image:hover .mask .button-action a.link {
+    left: 38%!important;
+  }
+}
+@media screen and (max-width: 380px) {
+  .blog-item .entry-image .mask {
+    display: none;
+  }
+  .blog-item .entry-image .owl-nav {
+    top: 35%;
+  }
+}

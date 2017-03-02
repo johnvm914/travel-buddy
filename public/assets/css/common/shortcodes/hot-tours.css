@@ -1,0 +1,242 @@
+/*------------------------------------------------------------------
+[ Hot tours]
+-------------------------------------------------------------------*/
+#tsp_hot_tour {
+  padding: 30px 0;
+}
+#tsp_hot_tour:hover .hot-tours-shortcode .owl-nav {
+  display: block;
+}
+.hot-tours-shortcode {
+  position: relative;
+}
+.hot-tours-shortcode .hot-tours-shortcode-item {
+  position: relative;
+}
+.hot-tours-shortcode .hot-tours-shortcode-item:hover .info-hidden {
+  top: 0;
+  webkit-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.hot-tours-shortcode .hot-tours-shortcode-item:hover .info-summary {
+  opacity: 0;
+}
+.hot-tours-shortcode .hot-tours-shortcode-item img {
+  width: 100%;
+}
+.hot-tours-shortcode .hot-tours-shortcode-item .info-summary {
+  webkit-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  padding: 0 30px;
+}
+.hot-tours-shortcode .hot-tours-shortcode-item .info-summary .name-add {
+  color: #ffffff;
+  font-family: 'Patua One', cursive;
+  font-weight: 300;
+  font-size: 24px;
+}
+.hot-tours-shortcode .hot-tours-shortcode-item .info-summary .price-add {
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffc107;
+  float: right;
+}
+.hot-tours-shortcode .hot-tours-shortcode-item .info-hidden {
+  position: absolute;
+  webkit-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  top: 100%;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 20%;
+  background: rgba(255, 255, 255, 0.7);
+}
+.hot-tours-shortcode .hot-tours-shortcode-item .info-hidden h3 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-family: 'Patua One', cursive;
+}
+@media screen and (max-width: 1199px) {
+  .hot-tours-shortcode .hot-tours-shortcode-item .info-hidden h3 {
+    font-size: 30px;
+  }
+}
+.hot-tours-shortcode .hot-tours-shortcode-item .info-hidden .meta {
+  color: #333333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.hot-tours-shortcode .hot-tours-shortcode-item .info-hidden .price {
+  font-size: 30px;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .hot-tours-shortcode .hot-tours-shortcode-item .info-hidden .price {
+    font-size: 20px;
+  }
+}
+.hot-tours-shortcode .hot-tours-shortcode-item .info-hidden a {
+  display: inline-block;
+  width: 170px;
+  height: 50px;
+  line-height: 49px;
+  text-align: center;
+  background: #ffc107;
+  color: #333333;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.hot-tours-shortcode .hot-tours-shortcode-item .info-hidden a:hover {
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  color: #ffc107;
+}
+@media screen and (max-width: 767px) {
+  .hot-tours-shortcode .hot-tours-shortcode-item .info-hidden a {
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.hot-tours-shortcode .all-offers {
+  text-align: center;
+  margin-top: 60px;
+}
+.hot-tours-shortcode .all-offers a {
+  width: 170px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  background: #ffc107;
+  border: 1px solid #ffc107;
+  display: inline-block;
+  webkit-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.hot-tours-shortcode .all-offers a:hover {
+  background: transparent;
+  color: #ffc107;
+  webkit-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.hot-tours-shortcode .owl-nav {
+  display: none;
+  position: absolute;
+  top: 42%;
+  width: 100%;
+}
+.hot-tours-shortcode .owl-nav .owl-prev {
+  position: absolute;
+  left: -5%;
+  font-size: 0px;
+  background: transparent;
+}
+.hot-tours-shortcode .owl-nav .owl-prev:before {
+  color: #000000;
+  font-size: 14px;
+  content: "\f060";
+  font-family: 'FontAwesome';
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.hot-tours-shortcode .owl-nav .owl-prev:hover {
+  background: transparent;
+}
+.hot-tours-shortcode .owl-nav .owl-prev:hover:before {
+  color: #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.hot-tours-shortcode .owl-nav .owl-next {
+  background: transparent;
+  font-size: 0px;
+  position: absolute;
+  right: -5%;
+}
+.hot-tours-shortcode .owl-nav .owl-next:before {
+  color: #000000;
+  font-size: 14px;
+  content: "\f061";
+  font-family: 'FontAwesome';
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.hot-tours-shortcode .owl-nav .owl-next:hover {
+  background: transparent;
+}
+.hot-tours-shortcode .owl-nav .owl-next:hover:before {
+  color: #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.hot-tours-shortcode .owl-dots {
+  display: none;
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .hot-tours-shortcode .hot-tours-shortcode-item .info-hidden {
+    padding-top: 12%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 660px) {
+  .hot-tours-shortcode .hot-tours-shortcode-item .info-hidden {
+    padding-top: 14%;
+  }
+  .hot-tours-shortcode .hot-tours-shortcode-item .info-hidden .price {
+    margin-bottom: 20px;
+  }
+  .hot-tours-shortcode .hot-tours-shortcode-item .info-hidden a {
+    display: inline-block;
+    width: 130px;
+    height: 40px;
+    line-height: 39px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hot-tours-shortcode .hot-tours-shortcode-item {
+    margin: 0 15px !important;
+  }
+}
+@media screen and (max-width: 315px) {
+  .hot-tours-shortcode .hot-tours-shortcode-item .info-hidden {
+    padding-top: 14%;
+  }
+  .hot-tours-shortcode .hot-tours-shortcode-item .info-hidden .price {
+    margin-bottom: 20px;
+  }
+  .hot-tours-shortcode .hot-tours-shortcode-item .info-hidden a {
+    display: inline-block;
+    width: 130px;
+    height: 40px;
+    line-height: 39px;
+    font-size: 14px;
+  }
+}

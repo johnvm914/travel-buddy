@@ -1,0 +1,124 @@
+/*------------------------------------------------------------------
+[ Subscribe newsletter ]
+-------------------------------------------------------------------*/
+#tsp_subcribe_news {
+  background: url(http://placehold.it/1920x241);
+  background-size: cover;
+}
+#tsp_subcribe_news .tsp-text-subscibe {
+  text-align: right;
+}
+#tsp_subcribe_news .tsp-text-subscibe h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-family: 'Patua One', cursive;
+}
+#tsp_subcribe_news .tsp-text-subscibe p {
+  text-transform: none;
+  font-size: 14px;
+  color: #333333;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  padding-top: 5px;
+}
+#tsp_subcribe_news .ts-form-subscibe form {
+  position: relative;
+}
+#tsp_subcribe_news .ts-form-subscibe form > i {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  color: #666666;
+}
+#tsp_subcribe_news .ts-form-subscibe form button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background: #ffc107;
+  border: 1px solid #ffc107;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 32px;
+  padding: 0 10px 0 5px;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#tsp_subcribe_news .ts-form-subscibe form button:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: "\f072";
+  font-size: 25px;
+  color: #333333;
+  position: relative;
+  top: 5px;
+  margin-left: 5px;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#tsp_subcribe_news .ts-form-subscibe form button:hover {
+  background: transparent;
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+#tsp_subcribe_news .ts-form-subscibe form button:hover:after {
+  color: #ffc107;
+}
+#tsp_subcribe_news .ts-form-subscibe form input {
+  line-height: 40px;
+  width: 100%;
+  text-transform: none;
+  font-size: 14px;
+  color: #666666;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  padding: 0 45px;
+  border: 0;
+}
+@media screen and (min-width: 1200px) {
+  #tsp_subcribe_news {
+    padding: 95px 0 85px 0 !important;
+  }
+  #tsp_subcribe_news .tsp-text-subscibe {
+    padding-right: 100px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #tsp_subcribe_news {
+    padding: 70px 0;
+  }
+  #tsp_subcribe_news .tsp-text-subscibe {
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 991px) {
+  #tsp_subcribe_news {
+    padding: 40px 0;
+  }
+  #tsp_subcribe_news .tsp-text-subscibe {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #tsp_subcribe_news .tsp-text-subscibe {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #tsp_subcribe_news .tsp-text-subscibe {
+    text-align: left!important;
+  }
+}
+@media screen and (max-width: 359px) {
+  #tsp_subcribe_news form button:after {
+    display: none!important;
+  }
+}

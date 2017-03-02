@@ -1,0 +1,181 @@
+/*------------------------------------------------------------------
+[ Search hotel  / tour ]
+-------------------------------------------------------------------*/
+.tsp-search-home {
+  position: absolute;
+  width: 100%;
+  bottom: 3%;
+}
+.tsp-tab-boooking-search li {
+  display: inline-block;
+}
+.tsp-tab-boooking-search li a {
+  display: block;
+  padding: 0 30px;
+  line-height: 45px;
+  text-transform: capitalize;
+  font-size: 18px;
+  color: #333333;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  background: #ffc107;
+  border-top: 3px solid #ffc107;
+}
+@media screen and (max-width: 767px) {
+  .tsp-tab-boooking-search li a {
+    padding: 0 25px;
+    font-size: 16px;
+  }
+}
+.tsp-tab-boooking-search li a i {
+  margin-right: 5px;
+  font-size: 24px;
+}
+.tsp-tab-boooking-search .active a {
+  background: #fafafa !important;
+}
+.tsp-search-booking .tsp-form-booking {
+  background: #fafafa;
+}
+.tsp-form-booking {
+  background: url(http://placehold.it/1170x127);
+  background-size: cover;
+  border-bottom: 3px solid #a6a6a6;
+  padding: 30px;
+}
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .tsp-form-booking {
+    padding: 15px 0;
+  }
+}
+.tsp-form-booking form .form-group,
+.tsp-form-booking form button {
+  display: inline-block;
+}
+.tsp-form-booking form .form-group {
+  margin-right: 30px;
+  position: relative;
+}
+.tsp-form-booking form label {
+  display: table;
+  width: 100%;
+}
+.tsp-form-booking form select,
+.tsp-form-booking form input,
+.tsp-form-booking form button {
+  line-height: 40px;
+  height: 40px;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #333333;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  border: 1px solid #ebebeb;
+}
+.tsp-form-booking form input {
+  width: 140px;
+  padding-left: 20px;
+}
+.tsp-form-booking form select {
+  width: 100px;
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.tsp-form-booking form .tsp-select-day {
+  width: 115px;
+}
+.tsp-form-booking form .tsp-search input {
+  width: 175px;
+  padding: 0 10px;
+}
+.tsp-form-booking form .tsp-select-booking:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: "\f107";
+  font-size: 22px;
+  color: #666666;
+  pointer-events: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: 40px;
+  line-height: 40px;
+  background: #ebebeb;
+  text-align: center;
+}
+.tsp-form-booking form .tsp-date span {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  color: #cccccc;
+  font-size: 20px;
+}
+.tsp-form-booking form button {
+  float: right;
+  margin-top: 25px;
+  background: #ffc107;
+  border: 1px solid #ffc107;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  line-height: 40px;
+  padding: 0 50px;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .tsp-form-booking form button {
+    font-size: 12px;
+  }
+}
+.tsp-form-booking form button:hover {
+  background: transparent;
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .tsp-form-booking button {
+    float: none!important;
+    margin: 10px auto!important;
+  }
+}
+@media screen and (max-width: 699px) {
+  .tsp-form-booking form .form-group {
+    margin-right: 5px!important;
+  }
+  .tsp-form-booking form button {
+    padding: 0 13px!important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .tsp-search-booking {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tsp-form-booking form .tsp-date {
+    width: 50%!important;
+    margin: 0 -2px 0 0 !important;
+  }
+  .tsp-form-booking form .tsp-date input {
+    width: 100%!important;
+  }
+  .tsp-form-booking form button {
+    float: none!important;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .tsp-search-home {
+    position: static!important;
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .tsp-search-home .tsp-search-booking .tsp-form-booking {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}

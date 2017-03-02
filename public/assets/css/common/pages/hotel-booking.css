@@ -1,0 +1,192 @@
+/*------------------------------------------------------------------
+[ Hotel booking]
+-------------------------------------------------------------------*/
+.tsp-box-hotel-content h2,
+.tsp-form-infomation h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #333333;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-family: 'Patua One', cursive;
+}
+.tsp-hotel-cart h2 {
+  margin-bottom: 60px;
+}
+.tsp-hotel-cart .tsp-cart-item {
+  display: table;
+  width: 100%;
+}
+.tsp-hotel-cart .tsp-cart-item .tsp-img img {
+  width: 100%;
+  height: 210px;
+}
+.tsp-hotel-cart .tsp-cart-item .tsp-content-hotel h3 {
+  margin-top: 0;
+}
+.tsp-hotel-cart .tsp-cart-item .tsp-content-hotel h3 a {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #333333;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-family: 'Patua One', cursive;
+}
+.tsp-hotel-cart .tsp-cart-item .tsp-content-hotel .tsp-star-rating {
+  margin-bottom: 25px;
+}
+.tsp-hotel-cart .tsp-cart-item .tsp-content-hotel .tsp-hotel-detail .tsp-detail-item {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  font-family: 'Patua One', cursive;
+  margin-bottom: 10px;
+}
+.tsp-hotel-cart .tsp-cart-item .tsp-content-hotel .tsp-hotel-detail .tsp-detail-item span {
+  text-transform: none;
+  color: #666666;
+}
+.tsp-cart-item .tsp-to-price {
+  background: url(http://placehold.it/270x209);
+  background-size: cover;
+  padding: 25px 30px;
+}
+.tsp-cart-item .tsp-to-price .tsp-unit-price,
+.tsp-cart-item .tsp-to-price .tsp-price-cart {
+  text-transform: none;
+  font-size: 18px;
+  color: #333333;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+.tsp-cart-item .tsp-to-price .tsp-unit-price {
+  margin-bottom: 5px;
+}
+.tsp-cart-item .tsp-to-price .tsp-price-cart {
+  font-size: 24px;
+  margin: 8px 0 18px 0;
+}
+.tsp-cart-item .tsp-to-price .tsp-price-cart span {
+  font-weight: normal;
+}
+.tsp-form-site .tsp-content-info {
+  padding: 20px 0;
+}
+.tsp-form-site label,
+.tsp-form-site input,
+.tsp-form-site textarea,
+.tsp-form-site .tsp-group-address {
+  display: table;
+  width: 100%;
+}
+.tsp-form-site label {
+  font-size: 14px;
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+.tsp-form-site input,
+.tsp-form-site textarea {
+  border: 1px solid #ccc;
+  font-style: italic;
+  margin-bottom: 10px;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-form-site input:focus,
+.tsp-form-site textarea:focus {
+  border: 1px solid #ffc107;
+  outline: 0;
+}
+.tsp-form-site input {
+  line-height: 50px;
+  padding: 0 20px;
+}
+.tsp-form-site textarea {
+  padding: 18px 20px;
+  line-height: 25px;
+  height: 150px;
+}
+.tsp-form-site .form-address {
+  margin-bottom: 20px;
+}
+.tsp-method-payment {
+  margin-bottom: 30px;
+}
+.tsp-method-payment .tsp-payment-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+.tsp-method-payment .tsp-payment-item label {
+  display: table;
+  width: 100%;
+  font-size: 14px;
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  cursor: pointer;
+}
+.tsp-method-payment .tsp-payment-item input[type="radio"] {
+  border: 1px solid red;
+}
+.tsp-method-payment .tsp-payment-item span {
+  text-transform: none;
+  font-size: 14px;
+  color: #a5a5a5;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  font-style: italic;
+  display: block;
+  padding-left: 20px;
+}
+.tsp-method-payment .tsp-payment-item .tsp-img-des {
+  float: right;
+  margin-top: -45px;
+}
+.tsp-form-infomation {
+  display: table;
+  width: 100%;
+  margin-top: 30px;
+}
+.tsp-form-infomation h2 {
+  margin-bottom: 30px;
+}
+.tsp-form-infomation button {
+  padding: 0;
+  line-height: 70px;
+}
+@media screen and (min-width: 1200px) {
+  #tsp_booking_hotel {
+    padding: 35px 0 65px 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  #tsp_booking_hotel {
+    padding: 15px 0 30px 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .tsp-hotel-cart {
+    padding: 0 15px;
+  }
+  .tsp-form-infomation .tsp-col-1 {
+    padding-left: 15px!important;
+  }
+  .tsp-form-infomation .tsp-col-2 {
+    padding-right: 15px!important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .tsp-hotel-cart h2 {
+    padding: 0 15px;
+  }
+  .tsp-form-infomation .form-group.tsp-no-padding-left,
+  .tsp-form-infomation .form-group.tsp-no-padding-right {
+    padding: 0;
+  }
+}

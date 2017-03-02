@@ -1,0 +1,101 @@
+/*------------------------------------------------------------------
+[ Booking history]
+-------------------------------------------------------------------*/
+.booking-history th {
+  text-transform: uppercase;
+  font-family: 'Patua One', cursive;
+  font-weight: 300;
+}
+.booking-history td.td-type i {
+  color: #ffc107;
+  font-size: 18px;
+}
+.booking-history td.td-type p {
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 800px) {
+  .booking-history {
+    width: 100%;
+    border: 1px solid #eeeeee;
+  }
+  .booking-history .background-color-other td {
+    background: #fafafa;
+  }
+  .booking-history td.td-type {
+    padding: 10px 0;
+  }
+  .booking-history,
+  .booking-history thead,
+  .booking-history tbody,
+  .booking-history th,
+  .booking-history td,
+  .booking-history tr {
+    text-align: center;
+  }
+  .booking-history thead {
+    border-bottom: 2px solid #ffc107;
+  }
+  .booking-history thead th {
+    padding: 20px 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  /* Force table to not be like tables anymore */
+  .booking-history,
+  .booking-history thead,
+  .booking-history tbody,
+  .booking-history th,
+  .booking-history td,
+  .booking-history tr {
+    display: block;
+    width: 100%;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .booking-history thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .booking-history tr {
+    border: 1px solid #eeeeee;
+    margin-bottom: 30px;
+  }
+  .booking-history td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+    padding-left: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    white-space: normal;
+    text-align: left;
+  }
+  .booking-history td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 0px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+  /*Label the data*/
+  .booking-history td:before {
+    content: attr(data-title);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .booking-history {
+    margin: 60px 0 100px 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .booking-history {
+    margin: 40px 0 50px 0;
+  }
+}

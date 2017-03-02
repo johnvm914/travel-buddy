@@ -1,0 +1,181 @@
+/*------------------------------------------------------------------
+[ Hotel grid]
+-------------------------------------------------------------------*/
+.tsp-hotel-list article h2,
+.tsp-grid-hotel article h2 {
+  margin: 15px 0;
+}
+.tsp-hotel-list article h2 a,
+.tsp-grid-hotel article h2 a {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #333333;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-family: 'Patua One', cursive;
+}
+.tsp-hotel-list article .tsp-image img,
+.tsp-grid-hotel article .tsp-image img {
+  width: 100%;
+  height: 100%;
+}
+.tsp-hotel-list article .tsp-hotel-content p,
+.tsp-grid-hotel article .tsp-hotel-content p {
+  text-transform: none;
+  font-size: 14px;
+  color: #333333;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  text-align: justify;
+}
+.tsp-grid-hotel article {
+  margin: 30px 0 40px 0;
+  min-height: 455px;
+}
+.tsp-grid-hotel article .tsp-image {
+  position: relative;
+  width: 100%;
+}
+.tsp-grid-hotel article .tsp-image .tsp-hotel-hover {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  webkit-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+.tsp-grid-hotel article .tsp-image .tsp-hotel-hover a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.tsp-grid-hotel article .tsp-image .tsp-hotel-hover button {
+  background: #ffc107;
+  border: 1px solid #ffc107;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 45px;
+  padding: 0 20px;
+  position: relative;
+  top: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  webkit-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+@media screen and (max-width: 767px) {
+  .tsp-grid-hotel article .tsp-image .tsp-hotel-hover button {
+    padding: 0 20px;
+    line-height: 40px;
+    font-size: 13px;
+  }
+}
+.tsp-grid-hotel article .tsp-image .tsp-hotel-hover button:hover {
+  background: transparent;
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+.tsp-grid-hotel article .tsp-price,
+.tsp-grid-hotel article .tsp-star-rating {
+  padding: 0;
+}
+.tsp-grid-hotel article .tsp-price-rate {
+  display: table;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.tsp-grid-hotel article .tsp-price-rate .tsp-price strong {
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #ffc107;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+.tsp-grid-hotel article .tsp-price-rate .tsp-price span {
+  text-transform: none;
+  font-size: 14px;
+  color: #999999;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
+.tsp-grid-hotel article .tsp-price-rate .tsp-star-rating {
+  text-align: right;
+}
+.tsp-grid-hotel article:hover .tsp-hotel-hover {
+  opacity: 1;
+}
+.tsp-grid-hotel article:hover .tsp-hotel-hover button {
+  top: 50%;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+}
+.tsp-grid-hotel article:hover h2 a {
+  color: #ffc107;
+}
+@media screen and (min-width: 768px) {
+  .tsp-grid-hotel article:first-child,
+  .tsp-grid-hotel article:nth-child(3n+4) {
+    padding-left: 0;
+  }
+  .tsp-grid-hotel article:nth-child(3n+3) {
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .tsp-grid-hotel article {
+    min-height: 475px;
+  }
+  .tsp-grid-hotel article .tsp-image,
+  .tsp-grid-hotel article .tsp-image img {
+    height: 135px;
+  }
+  .tsp-grid-hotel article .tsp-price strong {
+    font-size: 20px!important;
+  }
+  .tsp-grid-hotel article .tsp-star-rating {
+    margin: 5px 0!important;
+  }
+  .tsp-grid-hotel article .tsp-hotel-hover button {
+    line-height: 30px !important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .tsp-grid-hotel article {
+    min-height: 465px;
+  }
+  .tsp-grid-hotel article .tsp-image,
+  .tsp-grid-hotel article .tsp-image img {
+    height: 175px;
+  }
+  .tsp-grid-hotel article .tsp-hotel-hover button {
+    line-height: 35px !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tsp-grid-hotel article:first-child,
+  .tsp-grid-hotel article:nth-child(3n+4),
+  .tsp-grid-hotel article:nth-child(3n+3) {
+    width: 385px;
+  }
+  .tsp-grid-hotel article:nth-child(3n+2) {
+    width: 400px;
+    padding: 0 15px;
+  }
+  .tsp-grid-hotel article .tsp-image,
+  .tsp-grid-hotel article .tsp-image img {
+    height: 210px;
+  }
+}

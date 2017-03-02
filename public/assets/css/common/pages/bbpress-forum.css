@@ -1,0 +1,109 @@
+/*------------------------------------------------------------------
+[ BBpress forum]
+-------------------------------------------------------------------*/
+.bbpress-forum th {
+  text-transform: uppercase;
+  font-family: 'Patua One', cursive;
+  font-weight: 300;
+}
+@media screen and (min-width: 600px) {
+  .bbpress-forum {
+    width: 100%;
+    border-bottom: 2px solid #ffc107;
+  }
+  .bbpress-forum tr td {
+    border-bottom: 1px solid #eeeeee;
+  }
+  .bbpress-forum td.forum-content {
+    text-align: left;
+    padding-left: 30px;
+  }
+  .bbpress-forum td.forum-content span {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  .bbpress-forum td.forum-content p {
+    color: #666666;
+    font-style: italic;
+    margin-bottom: 35px;
+  }
+  .bbpress-forum td.freshness span,
+  .bbpress-forum td.freshness .author {
+    color: #666666;
+  }
+  .bbpress-forum th.edit-forum-width {
+    width: 55%;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .bbpress-forum,
+  .bbpress-forum thead,
+  .bbpress-forum tbody,
+  .bbpress-forum th,
+  .bbpress-forum td,
+  .bbpress-forum tr {
+    text-align: center;
+  }
+  .bbpress-forum thead {
+    border-bottom: 2px solid #ffc107;
+  }
+  .bbpress-forum thead th {
+    padding: 20px 0;
+    background: #fafafa;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* Force table to not be like tables anymore */
+  .bbpress-forum,
+  .bbpress-forum thead,
+  .bbpress-forum tbody,
+  .bbpress-forum th,
+  .bbpress-forum td,
+  .bbpress-forum tr {
+    display: block;
+    width: 100%;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .bbpress-forum thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .bbpress-forum tr {
+    border: 1px solid #eeeeee;
+    margin-bottom: 30px;
+  }
+  .bbpress-forum td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+    padding-left: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    white-space: normal;
+    text-align: left;
+  }
+  .bbpress-forum td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 10px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+  /*
+	Label the data
+	*/
+  .bbpress-forum td:before {
+    content: attr(data-title);
+  }
+}

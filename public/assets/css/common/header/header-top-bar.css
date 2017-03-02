@@ -1,0 +1,90 @@
+/*------------------------------------------------------------------
+[ header-top-bar ]
+-------------------------------------------------------------------*/
+.tsp-header-bar {
+  padding-top: 30px;
+}
+.tsp-header-bar .tsp-language,
+.tsp-header-bar .tsp-account {
+  display: inline-block;
+}
+.tsp-header-bar .tsp-language a,
+.tsp-header-bar .tsp-account a {
+  color: #000000;
+  font-size: 13px;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  display: inline-block;
+  border: 1px solid #eeeeee;
+  text-transform: uppercase;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-header-bar .tsp-language a:hover,
+.tsp-header-bar .tsp-account a:hover {
+  border: 1px solid #ffc107;
+  color: #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tsp-header-bar .tsp-language a i,
+.tsp-header-bar .tsp-account a i {
+  margin-left: 15px;
+}
+.tsp-header-bar .tsp-account {
+  margin-right: 25px;
+}
+.tsp-header-bar .tsp-list-lang ul li a {
+  border: none;
+  text-align: left;
+}
+.tsp-header-bar .tsp-list-lang ul li a:hover {
+  border: none;
+}
+.tsp-header-bar .top-content {
+  float: right;
+}
+/**
+* Language in hedaer top bar
+**/
+.tsp-header-bar .tsp-language,
+.tsp-header-bar .tsp-account {
+  padding-left: 0;
+}
+.tsp-header-bar .tsp-language .tsp-link-lang,
+.tsp-header-bar .tsp-account .tsp-link-lang {
+  display: block;
+  position: relative;
+}
+.tsp-header-bar .tsp-language .tsp-list-lang,
+.tsp-header-bar .tsp-account .tsp-list-lang {
+  position: absolute;
+  width: 120px;
+  z-index: 9;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  opacity: 0;
+  visibility: hidden;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+.tsp-header-bar .tsp-language .tsp-list-lang li,
+.tsp-header-bar .tsp-account .tsp-list-lang li {
+  line-height: 35px;
+  padding-left: 10px;
+}
+.tsp-header-bar .tsp-language:hover .tsp-list-lang,
+.tsp-header-bar .tsp-account:hover .tsp-list-lang {
+  opacity: 1;
+  visibility: visible;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 0px;
+}

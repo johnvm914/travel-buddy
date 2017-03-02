@@ -1,14 +1,35 @@
-<h1>Please Log Into Your TravelBuddy Account:</h1>
-<%= form_tag "/login", method: :post do %>
-  <div>
-    User Name:
-    <input type="text" name="user_name">
+<section id="tsp_login_page" class="tsp-page-tpl">
+  <div class="container">
+      <div class="row">
+          <div class="tsp-box-content tsp-page-acc">
+              <div class="tsp-nav-register col-md-6 col-sm-6 col-xs-6 tsp-full-xs tsp-no-padding-left">
+                  <div class="col-lg-offset-right-1 col-md-offset-right-1 col-sm-offset-right-0 col-xs-offset-right-0 tsp-content">
+                      <h2>New customer</h2>
+                      <p>Join happy customers with us to be up-to-date on our recent offers and big deals.</p>
+                      <a href="register.html" class="tsp-btn-site">Sign Up Now</a>
+                  </div>
+                  <!-- div offset right -->
+              </div>
+              <div class="tsp-form-login col-md-6 col-sm-6 col-xs-6 tsp-full-xs tsp-no-padding-right">
+                  <div class="col-lg-offset-1 col-md-offset-1">
+                      <h2>Return customer</h2>
+                      <p>I am a returning customer</p>
+                      <!-- <form action="#" name="formLogin" class="tsp-form-site"> -->
+                        <%= form_tag "/login", method: :post, class: "tsp-form-site" do %>
+                          <div class="form-group">
+                              <input type="text" name="user_name" placeholder="Username">
+                          </div>
+                          <div class="form-group">
+                              <input type="password" name="password" placeholder="Password">
+                          </div>
+                          <button type="submit" class="tsp-btn-site">Login Now</button>
+                      <!-- </form> -->
+                      <% end %>
+                  </div>
+                  <!-- div offset left -->
+              </div>
+          </div>
+      </div>
+      <!-- div row -->
   </div>
-
-  <div>
-    Password:
-    <input type="password" name="password">
-  </div>
-
-  <input type="submit" value="Log In">
-<% end %>
+</section>

@@ -1,0 +1,48 @@
+/*------------------------------------------------------------------
+[ Our services]
+-------------------------------------------------------------------*/
+#tsp_our_services {
+  padding: 60px 0 70px 0;
+}
+.our-service-item {
+  text-align: center;
+  padding: 40px 60px;
+  border: 12px solid #eeeeee;
+  margin-bottom: 30px;
+  webkit-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.our-service-item:hover {
+  border: 12px solid #ffc107;
+  webkit-transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.our-service-item h3 {
+  font-size: 20px;
+  color: #333333;
+  text-transform: uppercase;
+  font-family: 'Patua One', cursive;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.our-service-item p {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+.our-service-item a {
+  color: #666666;
+  font-style: italic;
+  font-size: 14px;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.our-service-item a:hover {
+  color: #ffc107;
+  webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
