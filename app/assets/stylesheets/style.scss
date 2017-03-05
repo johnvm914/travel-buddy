@@ -1,8 +1,26 @@
 body {
   background: lavender;
+  font-family: "Open Sans";
 }
 
 .small {
   max-width: 75%;
   height: auto;
+}
+
+
+h1 {
+  font-family: "Patua One", cursive;
+}
+
+a:hover {
+    color: rgb(255, 193, 7);
+}
+
+button {
+  background-color: rgb(255, 193, 7);
+}
+
+button:hover {
+  background-color: transparent;
 }

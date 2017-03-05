@@ -1,3 +1,11 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.tsp-banner-slider {
+  background-image: url("/assets/about/bg-about.jpg");
+}
+
+.about-carousel {
+  height: 370px;
+  width: 670px;
+}

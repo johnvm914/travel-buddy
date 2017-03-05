@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: "pages#show"
 
+  get "/pages", to: "pages#show"
+
   get "/signup", to: "users#new"
   post "/users", to: "users#create"
 
