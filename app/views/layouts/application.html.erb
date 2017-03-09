@@ -63,17 +63,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="tsp-logo col-md-3 col-sm-3 col-xs-3">
-                            <a href="index.html">
+                            <a href="/pages">
                                 <%= image_tag "TravelBuddyLogo.png", class: "small" %>
                             </a>
                         </div>
                         <div id="tsp_menu_cart_search" class="col-md-9 col-sm-9 col-xs-12">
                             <nav>
                                 <ul id="menu">
-                                    <li>
+                                    <li class="<%= "current-menu-item" if request.path == "/pages" %>">
                                         <a href="/pages">Home</a>
                                     </li>
-                                    <li><a href="/pages#about">About</a>
+                                    <li ><a href="/pages#about">About</a>
                                     </li>
                                     <li class="tsp-has-mega-menu">
                                         <a href="hotel-grid.html">Hotel<i class="fa fa-caret-down"></i></a>
@@ -135,9 +135,11 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a href="/profiles/<%= current_user.id %>">My Profile</a>
-                                    </li>
+                                    <% if current_user %>
+                                        <li class="<%= "current-menu-item" if request.path == "/profiles/#{current_user.id}" %>">
+                                            <a href="/profiles/<%= current_user.id %>">My Profile</a>
+                                        </li>
+                                    <% end %>
                                     <li><a href="mailto:johnvm914@gmail.com">Contact</a>
                                     </li>
                                 </ul>
@@ -159,7 +161,10 @@
             <%= message %>
           </div>
         <% end %>
-        <%= yield %>
+
+        <!-- <div class="container"> -->
+            <%= yield %>
+        <!-- </div> -->
         
         <footer>
             <!--start footer main-->
@@ -186,7 +191,7 @@
                         <!--Start Item footer main-->
                         <div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-1 tsp-footer-option hidden-xs hidden-sm tsp-no-padding-right">
                             <aside class="tsp-widget-footer">
-                                <h2>My Pages</h2>
+                                <h2>More About Me</h2>
                                 <div class="tsp-content-item">
                                     <ul class="tsp-footer-address">
                                         <li>

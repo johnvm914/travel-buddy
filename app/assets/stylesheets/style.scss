@@ -1,5 +1,5 @@
 body {
-  background: lavender;
+  background: MediumPurple;
   font-family: "Open Sans";
 }
 
@@ -8,19 +8,26 @@ body {
   height: auto;
 }
 
-
 h1 {
   font-family: "Patua One", cursive;
+}
+
+a:visited {
+    color: lavender;
 }
 
 a:hover {
     color: rgb(255, 193, 7);
 }
 
-button {
+button, .delete-button {
   background-color: rgb(255, 193, 7);
 }
 
 button:hover {
   background-color: transparent;
+}
+
+header {
+  background: SlateGray;
 }
