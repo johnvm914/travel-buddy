@@ -1,5 +1,11 @@
 class TripsController < ApplicationController
 
+  def index
+    destination = params[:destination]
+    @trips = Trip.where("destination LIKE ?", "%#{destination}%")
+    render "index.html.erb"
+  end
+
   def new
     @trip = Trip.new
     render "new.html.erb"

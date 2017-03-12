@@ -1,4 +1,49 @@
-<h1>Create Your TravelBuddy Account:</h1>
+<section id="tsp_login_page" class="tsp-page-tpl">
+  <div class="container">
+      <div class="row">
+          <div class="tsp-box-content tsp-page-acc">
+            <div class="tsp-form-login col-md-6 col-sm-6 col-xs-6 tsp-full-xs tsp-no-padding-left">
+                <div class="col-lg-offset-1 col-md-offset-1">
+                    <h2>Create Your TravelBuddy Account:</h2>
+                      <%= form_tag "/users", method: :post, class: "tsp-form-site" do %>
+                        <div class="form-group">
+                            <input type="text" name="first_name" value="<%= @user.first_name %>" placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="last_name" value="<%= @user.last_name %>" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" value="<%= @user.email %>" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="user_name" value="<%= @user.user_name %>" placeholder="User Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password_confirmation" placeholder="Confirm Password">
+                        </div>
+                        <button type="submit" class="tsp-btn-site">Create Account</button>
+                    <% end %>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>Create Your TravelBuddy Account:</h1>
 <%= form_tag "/users", method: :post do %>
   <div>
     First Name:
@@ -31,4 +76,4 @@
   </div>
 
   <input type="submit" value="Create Account">
-<% end %>
+<% end %> -->

@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get "/signup", to: "users#new"
   post "/users", to: "users#create"
 
-  get "/users/:id", to: "users#show"
   get "/users/:id/edit", to: "users#edit"
   patch "/users/:id", to: "users#update"
   delete "/users/:id", to: "users#destroy" 
@@ -22,6 +21,7 @@ Rails.application.routes.draw do
   patch "/profiles/:id", to: "profiles#update"
   delete "/profiles/:id", to: "profiles#destroy"
 
+  get "/trips", to: "trips#index"
   get "/trips/new", to: "trips#new"
   post "/trips", to: "trips#create"
   get "/trips/:id", to: "trips#show"

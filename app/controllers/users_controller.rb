@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Account Successfully Created!"
-      redirect_to "/users/#{user.id}"
+      redirect_to "/pages"
     else
       flash[:warning] = "Account Not Created...Please Try Again!"
       redirect_to "/signup"

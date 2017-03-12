@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
       <% if @profile.user.id == current_user.id %>
         <h1>My Profile:</h1>
       <% else %>
@@ -16,13 +16,14 @@
       <p><b>Contact Email:</b> <%= @profile.user.email %></p>
 
       <% if @profile.user.id == current_user.id %>
-        <a href="/profiles/<%= @profile.id %>/edit"><button>Edit Your Profile</button></a>
+        <a href="/profiles/<%= @profile.id %>/edit"><button class="button tsp-btn-site">Edit Your Profile</button></a>
         <br><br>
-        <%= button_to "Delete Your Profile", "/profiles/#{@profile.id}", method: :delete, class: "delete-button" %>
+        <%= button_to "Delete Your Profile", "/profiles/#{@profile.id}", method: :delete, class: "button tsp-btn-site" %>
+        <br>
       <% end %>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-4">
       <% if @profile.user.id == current_user.id %>
         <h1>My Trips:</h1>
       <% else %>
@@ -45,5 +46,13 @@
         <% end %>
       </ol>
     </div>
+
+    <div class="col-md-4">
+      <% if @profile.user.id == current_user.id %>
+        <h1>Trips I'm interested in:</h1>
+      <% else %>
+        <h1>Trips <%= @profile.user.user_name %> is interested in:</h1>
+      <% end %>
+    </div> 
   </div>
 </div>

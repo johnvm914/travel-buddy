@@ -19,11 +19,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
+
 <body>
-    <!--[if lt IE 10]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
     <div class="tsp-main">
         <header>
             <!--start header top bar-->
@@ -120,18 +117,13 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <a href="blog.html">Blog</a>
+                                        <a href="blog.html">Search</a>
                                         <ul>
                                             <li class="tsp-has-menu-child">
-                                                <a href="blog.html">Blog list</a>
-                                                <ul>
-                                                    <li><a href="blog.html">Blog grid</a>
-                                                    </li>
-                                                    <li><a href="blog-sidebar.html">Blog list</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="blog-detail.html">Blog detail</a>
+                                                <%= form_tag "/trips", method: :get do %>
+                                                  <input type="text" name="destination" placeholder="Search Trips By Destination">
+                                                  <button type="submit">Submit</button>
+                                                <% end %>
                                             </li>
                                         </ul>
                                     </li>

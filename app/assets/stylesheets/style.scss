@@ -20,12 +20,10 @@ a:hover {
     color: rgb(255, 193, 7);
 }
 
-button, .delete-button {
-  background-color: rgb(255, 193, 7);
-}
-
-button:hover {
-  background-color: transparent;
+.button {
+  padding: 15px 20px;
+  line-height: 15px;
+  font-size: 14px;
 }
 
 header {
