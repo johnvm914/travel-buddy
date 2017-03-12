@@ -2,7 +2,7 @@ class TripsController < ApplicationController
 
   def index
     destination = params[:destination]
-    @trips = Trip.where("destination LIKE ?", "%#{destination}%")
+    @trips = Trip.where("destination LIKE ? AND user_id != ?", "%#{destination}%", current_user.id)
     render "index.html.erb"
   end
 

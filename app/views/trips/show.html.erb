@@ -9,13 +9,13 @@
       <p><b>Wish List:</b><br><%= @trip.wish_list %></p>
 
       <% if @trip.user.id == current_user.id %>
-        <a href="/trips/<%= @trip.id %>/edit"><button>Edit This Trip</button></a><br><br>
-        <%= button_to "Delete This Trip", "/trips/#{@trip.id}", method: :delete, class: "delete-button" %>
+        <a href="/trips/<%= @trip.id %>/edit"><button class="button tsp-btn-site">Edit This Trip</button></a><br><br>
+        <%= button_to "Delete This Trip", "/trips/#{@trip.id}", method: :delete, class: "button tsp-btn-site" %>
       <% end %>
     </div>
 
     <div class="col-md-8">
-      <h1>Discover This Location:</h1>
+      <h1>Explore This Location:</h1>
       <iframe
         width="600"
         height="450"

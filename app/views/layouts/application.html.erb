@@ -117,12 +117,12 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <a href="blog.html">Search</a>
+                                        <a href="javascript:void(0)">Search</a>
                                         <ul>
                                             <li class="tsp-has-menu-child">
                                                 <%= form_tag "/trips", method: :get do %>
-                                                  <input type="text" name="destination" placeholder="Search Trips By Destination">
-                                                  <button type="submit">Submit</button>
+                                                  <input type="text" name="destination" placeholder="Search Trips By Destination" class="search-input">
+                                                  <button type="submit" class="button tsp-btn-site">Submit</button>
                                                 <% end %>
                                             </li>
                                         </ul>
