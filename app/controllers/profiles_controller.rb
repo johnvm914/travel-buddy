@@ -1,11 +1,13 @@
 class ProfilesController < ApplicationController
 
   def new
-    if current_user.profile
+    if current_user && current_user.profile
       redirect_to "/profiles/#{current_user.id}"
-    else
+    elsif current_user
       @profile = Profile.new
       render "new.html.erb"
+    else
+      redirect_to "/login"
     end
   end
 

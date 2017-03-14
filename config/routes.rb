@@ -29,4 +29,6 @@ Rails.application.routes.draw do
   patch "/trips/:id", to: "trips#update"
   delete "/trips/:id", to: "trips#destroy"
 
+  post "/favorites", to: "favorites#create"
+
 end

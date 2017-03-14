@@ -53,6 +53,11 @@
       <% else %>
         <h1>Trips <%= @profile.user.user_name %> is interested in:</h1>
       <% end %>
+      <ol>
+        <% @profile.user.favorites.each do |favorite| %>
+          <li><a href="/trips/<%= favorite.trip.id %>"><%= favorite.trip.destination %></a></li>
+        <% end %>
+      </ol>
     </div> 
   </div>
 </div>

@@ -11,6 +11,10 @@
       <% if @trip.user.id == current_user.id %>
         <a href="/trips/<%= @trip.id %>/edit"><button class="button tsp-btn-site">Edit This Trip</button></a><br><br>
         <%= button_to "Delete This Trip", "/trips/#{@trip.id}", method: :delete, class: "button tsp-btn-site" %>
+      <% elsif @trip.not_favorited_by(current_user.id)  %>
+        <%= button_to "Bookmark This Trip", "/favorites", params: {trip_id: @trip.id}, method: :post, class: "button tsp-btn-site" %>
+      <% else %>
+        <b style="color:rgb(255, 193, 7);">Trip Bookmarked</b>
       <% end %>
     </div>
 
