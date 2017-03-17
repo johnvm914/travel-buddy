@@ -24,7 +24,11 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find_by(id: params[:id])
-    render "show.html.erb"
+    if @profile
+      render "show.html.erb"
+    else
+      redirect_to "/profiles/new"
+    end
   end
 
   def edit
