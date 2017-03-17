@@ -31,4 +31,6 @@ Rails.application.routes.draw do
 
   post "/favorites", to: "favorites#create"
 
+  resources :conversations, only: [:index, :show, :destroy]
+
 end
