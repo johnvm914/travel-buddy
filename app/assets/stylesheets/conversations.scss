@@ -7,3 +7,11 @@
   margin-bottom: 1em;
   margin-top: 1em;
 }
+
+a.visited-conv-link:visited {
+  color: MediumPurple;
+}
+
+a.visited-conv-link:hover {
+    color: rgb(255, 193, 7);
+}
