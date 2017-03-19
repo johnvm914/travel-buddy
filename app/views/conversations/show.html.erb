@@ -1,19 +1,22 @@
-<h1>Conversation:</h1>
+<div class="container">
+  <h1>Conversation:</h1>
 
-<div class="panel panel-default">
-  <div class="messages">
-    <% @conversation.receipts_for(current_user).each do |receipt| %>
-      <% message = receipt.message %>
-
-      <%= message.sender.name %>
-        says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %>
-      <%= message.body %>
-    <% end %>
+  <div class="panel panel-default">
+    <div class="messages">
+      <% @conversation.receipts_for(current_user).each do |receipt| %>
+        <% message = receipt.message %>
+        <%= message.sender.name %>: 
+        <%= message.body %>
+        <br>
+      <% end %>
+    </div>
   </div>
+  <%= form_tag reply_conversation_path(@conversation), method: :post do %>
+    <div class="form-group">
+      <%= text_area_tag "body", nil, cols: 3, class: "form-control", placeholder: "Enter your message here...", required: true %>
+    </div>
+    <%= submit_tag "Send Message", class: "button tsp-btn-site" %>
+    <br><br>
+  <% end %>
 </div>
-<%= form_tag reply_conversation_path(@conversation), method: :post do %>
-  <div class="form-group">
-    <%= text_area_tag 'body', nil, cols: 3, class: 'form-control', placeholder: 'Type something...', required: true %>
-  </div>
-  <%= submit_tag "Send Message", class: 'btn btn-primary' %>
-<% end %>
+

@@ -35,6 +35,12 @@ Rails.application.routes.draw do
     member do
       post :reply
     end
+    member do
+      post :restore
+    end
+    collection do
+      delete :empty_trash
+    end
   end
 
   resources :messages, only: [:new, :create]
