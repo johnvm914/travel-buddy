@@ -12,7 +12,7 @@
     <div class="col-sm-9">
       <% if (@box == "trash") && (@conversations != []) %>
           <p><%= link_to "Empty trash", empty_trash_conversations_path, class: "btn btn-danger", method: :delete,
-                         data: {confirm: "Are you sure?"} %></p>
+                data: {confirm: "Are you sure?"} %></p>
       <% elsif @conversations == [] %>
         <h1 class="mailbox-empty">Nothing here!</h1>
       <% end %>
@@ -22,4 +22,5 @@
       <%= will_paginate %>
     </div>
   </div>
+  <br><br><br>
 </div>
