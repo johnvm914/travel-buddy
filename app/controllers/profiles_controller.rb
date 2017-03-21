@@ -25,6 +25,7 @@ class ProfilesController < ApplicationController
   def show
     @profile = Profile.find_by(id: params[:id])
     if @profile
+      @conversations = current_user.mailbox.conversations
       render "show.html.erb"
     else
       redirect_to "/profiles/new"
