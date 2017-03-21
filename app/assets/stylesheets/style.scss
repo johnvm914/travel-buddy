@@ -12,8 +12,12 @@ h1 {
   font-family: "Patua One", cursive;
 }
 
+.link-underline {
+  text-decoration: underline;
+}
+
 a:visited {
-    color: lavender;
+    color: rgb(244, 254, 251);
 }
 
 a:hover {
@@ -28,4 +32,12 @@ a:hover {
 
 header {
   background: SlateGray;
+}
+
+span {
+  color: white;
+}
+
+p.white-text {
+  color: white;
 }
