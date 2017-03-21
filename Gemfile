@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'mailboxer'
+gem 'bootstrap-will_paginate'
+gem 'will_paginate'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

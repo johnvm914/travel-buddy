@@ -72,50 +72,6 @@
                                     </li>
                                     <li ><a href="/pages#about">About</a>
                                     </li>
-                                    <li class="tsp-has-mega-menu">
-                                        <a href="hotel-grid.html">Hotel<i class="fa fa-caret-down"></i></a>
-                                        <div class="mega-menu">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Europe</a>
-                                                    <ul>
-                                                        <li><a href="#">Europe 1</a>
-                                                        </li>
-                                                        <li><a href="#">Europe 2</a>
-                                                        </li>
-                                                        <li><a href="#">Europe 3</a>
-                                                        </li>
-                                                        <li><a href="#">Europe 4</a>
-                                                        </li>
-                                                        <li><a href="#">Europe 5</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Booking</a>
-                                                    <ul>
-                                                        <li><a href="hotel-booking.html">Hotel booking</a>
-                                                        </li>
-                                                        <li><a href="payment-success.html">Payment success</a>
-                                                        </li>
-                                                        <li><a href="booking-history.html">Booking history</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="hotel-grid.html">Hotel</a>
-                                                    <ul>
-                                                        <li><a href="hotel-grid.html">Hotel grid</a>
-                                                        </li>
-                                                        <li><a href="hotel-list.html">Hotel list</a>
-                                                        </li>
-                                                        <li><a href="hotel-detail.html">Hotel detail</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
                                     <% if current_user %>
                                         <li>
                                             <a href="javascript:void(0)">Search</a>
@@ -127,6 +83,9 @@
                                                     <% end %>
                                                 </li>
                                             </ul>
+                                        </li>
+                                        <li class="<%= "current-menu-item" if request.path == "/conversations" %>">
+                                            <a href="/conversations">Inbox</a>
                                         </li>
                                         <li class="<%= "current-menu-item" if request.path == "/profiles/#{current_user.id}" %>">
                                             <a href="/profiles/<%= current_user.id %>">My Profile</a>

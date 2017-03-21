@@ -3,6 +3,12 @@
     <div class="col-md-4">
       <% if @profile.user.id == current_user.id %>
         <h1>My Profile:</h1>
+        <% @conversations.each do |conversation| %>
+          <% if conversation.is_unread?(current_user) %>
+            <p class="unread-messages">You have an unread messages in your inbox</p>
+            <% break %>
+          <% end %>
+        <% end %>
       <% else %>
         <h1><%= @profile.user.user_name %>'s Profile:</h1>
       <% end %>
@@ -13,13 +19,22 @@
       <p><b>Age:</b> <%= @profile.age %></p>
       <p><b>Location:</b> <%= @profile.location %></p>
       <p><b>Bio:</b> <%= @profile.bio %></p>
-      <p><b>Contact Email:</b> <%= @profile.user.email %></p>
 
       <% if @profile.user.id == current_user.id %>
+        <% @conversations.each do |conversation| %>
+          <% if conversation.is_unread?(current_user) %>
+            <p>You have an unread messages in your inbox</p>
+            <% break %>
+          <% end %>
+        <% end %>
         <a href="/profiles/<%= @profile.id %>/edit"><button class="button tsp-btn-site">Edit Your Profile</button></a>
         <br><br>
         <%= button_to "Delete Your Profile", "/profiles/#{@profile.id}", method: :delete, class: "button tsp-btn-site" %>
         <br>
+      <% else %>
+        <br>
+        <%= link_to "Message #{@profile.user.user_name}", new_message_path(user: @profile.user.id), class: "button tsp-btn-site" %>
+        <br><br>
       <% end %>
     </div>
 
