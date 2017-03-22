@@ -87,9 +87,15 @@
                                         <li class="<%= "current-menu-item" if request.path == "/conversations" %>">
                                             <a href="/conversations">Inbox</a>
                                         </li>
-                                        <li class="<%= "current-menu-item" if request.path == "/profiles/#{current_user.id}" %>">
-                                            <a href="/profiles/<%= current_user.id %>">My Profile</a>
-                                        </li>
+                                        <% if current_user.profile %>
+                                            <li class="<%= "current-menu-item" if request.path == "/profiles/#{current_user.profile.id}" %>">
+                                                <a href="/profiles/<%= current_user.profile.id %>">My Profile</a>
+                                            </li>
+                                        <% else %>
+                                            <li class="<%= "current-menu-item" if request.path == "/profiles/new" %>">
+                                                <a href="/profiles/new">Create Profile</a>
+                                            </li>
+                                        <% end %>
                                     <% end %>
                                     <li><a href="mailto:johnvm914@gmail.com">Contact</a>
                                     </li>

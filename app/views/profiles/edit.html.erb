@@ -5,10 +5,8 @@
             <div class="tsp-form-login col-md-6 col-sm-6 col-xs-6 tsp-full-xs tsp-no-padding-left">
                 <div class="col-lg-offset-1 col-md-offset-1">
                     <h2>Edit Your TravelBuddy Profile:</h2>
+                        <p>Change profile pic:</p>
                         <%= form_tag "/profiles/#{@profile.id}", method: :patch, class: "tsp-form-site" do %>
-                        <div class="form-group">
-                            <input type="text" name="image" value="<%= @profile.image %>" placeholder="Image Url">
-                        </div>
                         <div class="form-group">
                             <input type="text" name="age" value="<%= @profile.age %>" placeholder="Age">
                         </div>
