@@ -43,12 +43,24 @@ class ProfilesController < ApplicationController
 
   def update
     @profile = Profile.find_by(id: params[:id])
-    @profile.assign_attributes(image: params[:image], age: params[:age], location: params[:location], bio: params[:bio], user_id: current_user.id)
+    @profile.assign_attributes(age: params[:age], location: params[:location], bio: params[:bio], user_id: current_user.id)
     if @profile.save
       flash[:success] = "Profile Successfully Updated!"
       redirect_to "/profiles/#{@profile.id}"
     else
       flash[:warning] = "Profile Not Updated...Please Try Again!"
+      render "edit.html.erb"
+    end
+  end
+
+  def change_pic
+    @profile = Profile.find_by(id: params[:id])
+    @profile.assign_attributes(profile_pic: params[:profile_pic])
+    if @profile.save
+      flash[:success] = "Profile Pic Successfully Updated!"
+      redirect_to "/profiles/#{@profile.id}"
+    else
+      flash[:warning] = "Profile Pic Not Updated...Please Try Again!"
       render "edit.html.erb"
     end
   end

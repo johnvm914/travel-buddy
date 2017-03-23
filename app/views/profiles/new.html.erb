@@ -6,11 +6,10 @@
                 <div class="col-lg-offset-1 col-md-offset-1">
                     <h2>Create Your TravelBuddy Profile:</h2>
                     <%= form_tag "/profiles", method: :post, multipart: true, class: "tsp-form-site" do %>
-                      <div>
-                        <input type="file" name="profile_pic" title="Upload Profile Pic">
-
-                       
-                      </div>
+                    <label>
+                    Choose Profile Pic:
+                    <input type="file" name="profile_pic" class="button tsp-btn-site file-height">
+                    </label>      
                       <div class="form-group">
                         <input type="text" name="age" value="<%= @profile.age %>" placeholder="Age">
                       </div>
