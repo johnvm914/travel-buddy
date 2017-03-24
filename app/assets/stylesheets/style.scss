@@ -34,10 +34,14 @@ header {
   background: SlateGray;
 }
 
-span {
+span, p.white-text, label.white-text {
   color: white;
 }
 
 p.white-text {
   color: white;
+}
+
+i.nobr {
+  white-space: wrap;
 }

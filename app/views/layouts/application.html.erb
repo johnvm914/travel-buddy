@@ -85,7 +85,11 @@
                                             </ul>
                                         </li>
                                         <li class="<%= "current-menu-item" if request.path == "/conversations" %>">
-                                            <a href="/conversations">Inbox</a>
+                                            <% if current_user.unread_mail %>
+                                                <a class="nobr" href="/conversations">Inbox <i class="fa fa-envelope" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Unread Messages"></i></a>
+                                            <% else %>
+                                                <a href="/conversations">Inbox</a>
+                                            <% end %>
                                         </li>
                                         <% if current_user.profile %>
                                             <li class="<%= "current-menu-item" if request.path == "/profiles/#{current_user.profile.id}" %>">

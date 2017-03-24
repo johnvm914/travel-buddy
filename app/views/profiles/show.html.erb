@@ -3,12 +3,6 @@
     <div class="col-md-4">
       <% if @profile.user.id == current_user.id %>
         <h1>My Profile:</h1>
-        <% @conversations.each do |conversation| %>
-          <% if conversation.is_unread?(current_user) %>
-            <p class="unread-messages">You have an unread messages in your inbox</p>
-            <% break %>
-          <% end %>
-        <% end %>
       <% else %>
         <h1><%= @profile.user.user_name %>'s Profile:</h1>
       <% end %>
@@ -20,12 +14,6 @@
       <p><b>Bio:</b> <span><%= @profile.bio %></span></p>
 
       <% if @profile.user.id == current_user.id %>
-        <% @conversations.each do |conversation| %>
-          <% if conversation.is_unread?(current_user) %>
-            <p>You have an unread messages in your inbox</p>
-            <% break %>
-          <% end %>
-        <% end %>
         <a href="/profiles/<%= @profile.id %>/edit"><button class="button tsp-btn-site">Edit Your Profile</button></a>
         <br><br>
         <%= button_to "Delete Your Profile", "/profiles/#{@profile.id}", method: :delete, class: "button tsp-btn-site" %>
@@ -56,7 +44,7 @@
       <% end %>
       <ol>
         <% @profile.user.friends.each do |friend| %>
-          <li><a href="/profiles/<%= friend.id %>"><%= friend.user_name %></a></li>
+          <li><a class="link-underline" href="/profiles/<%= friend.id %>"><%= friend.user_name %></a></li>
         <% end %>
       </ol>
     </div>
@@ -69,7 +57,7 @@
       <% end %>
       <ol>
         <% @profile.user.favorites.each do |favorite| %>
-          <li><a href="/trips/<%= favorite.trip.id %>"><%= favorite.trip.destination %></a></li>
+          <li><a class="link-underline" href="/trips/<%= favorite.trip.id %>"><%= favorite.trip.destination %></a></li>
         <% end %>
       </ol>
     </div> 

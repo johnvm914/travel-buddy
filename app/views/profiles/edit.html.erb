@@ -6,11 +6,12 @@
                 <div class="col-lg-offset-1 col-md-offset-1">
                         <h2>Edit Your TravelBuddy Profile:</h2>
                         <%= form_tag "/profiles/#{@profile.id}/pic", method: :patch, multipart: true, class: "tsp-form-site" do %>
-                            Change/Upload Profile Pic:
-                            <input type="file" name="profile_pic" class="button tsp-btn-site file-height">
-                            <input type="submit" class="button tsp-btn-site" value="Upload Photo">
+                            <label class="white-text">Change/Upload Profile Pic:
+                                <input type="file" name="profile_pic" class="button tsp-btn-site file-height">
+                            </label>
+                            <input type="submit" class="button tsp-btn-site file-height" value="Upload Photo">
                         <% end %>
-                        <%= image_tag(@profile.profile_pic.url) %>
+                        <%= image_tag @profile.profile_pic.url %>
                         <br><br>
                         <%= form_tag "/profiles/#{@profile.id}", method: :patch, class: "tsp-form-site" do %>   
                         <div class="form-group">

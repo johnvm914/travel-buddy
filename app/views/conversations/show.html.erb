@@ -3,7 +3,8 @@
 
   <div class="panel panel-default">
     <div class="messages">
-      <% @conversation.receipts_for(current_user).each do |receipt| %>
+      <% receipts = @conversation.receipts_for current_user %>
+      <% receipts.each do |receipt| %>
         <% message = receipt.message %>
         <%= message.sender.name %>: 
         <%= message.body %>
