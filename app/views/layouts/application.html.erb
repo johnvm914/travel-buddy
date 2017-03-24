@@ -86,7 +86,8 @@
                                         </li>
                                         <li class="<%= "current-menu-item" if request.path == "/conversations" %>">
                                             <% if current_user.unread_mail %>
-                                                <a class="nobr" href="/conversations">Inbox <i class="fa fa-envelope" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Unread Messages"></i></a>
+                                                <a href="/conversations">Inbox <i class="fa fa-envelope" aria-hidden=></i>
+                                                (<%= current_user.unread_mail_count %>)</a>
                                             <% else %>
                                                 <a href="/conversations">Inbox</a>
                                             <% end %>

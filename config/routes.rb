@@ -39,9 +39,6 @@ Rails.application.routes.draw do
     member do
       post :restore
     end
-    member do
-      post :mark_as_read
-    end
     collection do
       delete :empty_trash
     end

@@ -26,5 +26,16 @@ class User < ApplicationRecord
     end
     return false
   end
+
+  def unread_mail_count
+    count = 0
+    conversations = mailbox.conversations
+    conversations.each do |conversation|
+      if conversation.is_unread?(self)
+        count += 1
+      end
+    end
+    return count
+  end
   
 end
