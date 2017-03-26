@@ -3,7 +3,7 @@
 
   <div class="panel panel-default">
     <div class="messages">
-      <% receipts = @conversation.receipts_for current_user %>
+      <% receipts = @conversation.receipts_for(current_user).order(:created_at) %>
       <% receipts.each do |receipt| %>
         <% message = receipt.message %>
         <%= message.sender.name %>: 

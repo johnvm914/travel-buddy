@@ -1,9 +1,15 @@
 <div class="container">
   <h1>Trips to your requested destination:</h1>
-  <h3>Click on a link for more detailed user and trip information</h3>
-  <% @trips.each do |trip| %>
-    <p>User: <a href="/profiles/<%= trip.user.profile.id %>"><%= trip.user.user_name %></a></p>
-    <p>Destination: <a href="/trips/<%= trip.id %>"><%= trip.destination %></a></p>
-    <hr>
+  <% if @trips == [] %>
+    <h2>No Trips Found!</h2>
+    <br><br><br><br>
+  <% else %>
+    <h3>Click on a link for more detailed user and trip information</h3>
+    <% @trips.each do |trip| %>
+      <p><b>User: </b><a class="link-underline" href="/profiles/<%= trip.user.profile.id %>"><%= trip.user.user_name %></a></p>
+      <p><b>Destination: </b><a class="link-underline" href="/trips/<%= trip.id %>"><%= trip.destination %></a></p>
+      <hr>
+    <% end %>
   <% end %>
+  <br><br>
 </div>

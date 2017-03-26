@@ -59,12 +59,12 @@
             <div class="tsp-header-main">
                 <div class="container">
                     <div class="row">
-                        <div class="tsp-logo col-md-3 col-sm-3 col-xs-3">
+                        <div class="tsp-logo col-md-1 col-sm-1 col-xs-1">
                             <a href="/pages">
                                 <%= image_tag "TravelBuddyLogo.png", class: "small" %>
                             </a>
                         </div>
-                        <div id="tsp_menu_cart_search" class="col-md-9 col-sm-9 col-xs-12">
+                        <div id="tsp_menu_cart_search" class="col-md-11 col-sm-11 col-xs-12">
                             <nav>
                                 <ul id="menu">
                                     <li class="<%= "current-menu-item" if request.path == "/pages" %>">
@@ -78,7 +78,7 @@
                                             <ul>
                                                 <li class="tsp-has-menu-child">
                                                     <%= form_tag "/trips", method: :get do %>
-                                                      <input type="text" name="destination" placeholder="Search Trips By Destination" class="search-input">
+                                                      <input type="text" name="destination" placeholder="Search Trips By Destination" class="search-input" autocomplete="off">
                                                       <button type="submit" class="button tsp-btn-site">Submit</button>
                                                     <% end %>
                                                 </li>
@@ -101,9 +101,10 @@
                                                 <a href="/profiles/new">Create Profile</a>
                                             </li>
                                         <% end %>
+                                        <li class="<%= "current-menu-item" if request.path == "/trips/new" %>">
+                                            <a href="/trips/new">Create Trip</a>
+                                        </li>
                                     <% end %>
-                                    <li><a href="mailto:johnvm914@gmail.com">Contact</a>
-                                    </li>
                                 </ul>
                             </nav>
 
@@ -178,6 +179,7 @@
             <!--end footer main-->
         </footer>
     </div>
+    <script src="/assets/js/autosize.js"></script>
     <script src="/assets/js/vendors/jquery.min.js"></script>
     <script src="/assets/js/vendors/modernizr.min.js"></script>
     <script src="/assets/js/vendors/bootstrap.min.js"></script>
