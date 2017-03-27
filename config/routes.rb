@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get "/profiles/:id", to: "profiles#show"
   get "/profiles/:id/edit", to: "profiles#edit"
   patch "/profiles/:id", to: "profiles#update"
+  patch "/profiles/:id/pic", to: "profiles#change_pic"
   delete "/profiles/:id", to: "profiles#destroy"
 
   get "/trips", to: "trips#index"
@@ -37,9 +38,6 @@ Rails.application.routes.draw do
     end
     member do
       post :restore
-    end
-    member do
-      post :mark_as_read
     end
     collection do
       delete :empty_trash

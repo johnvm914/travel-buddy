@@ -4,11 +4,11 @@ body {
 }
 
 .small {
-  max-width: 75%;
+  width: 200px;
   height: auto;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: "Patua One", cursive;
 }
 
@@ -34,10 +34,11 @@ header {
   background: SlateGray;
 }
 
-span {
+span, p.white-text, label.white-text {
   color: white;
 }
 
-p.white-text {
-  color: white;
+textarea {
+  resize: none;
+  overflow: hidden;
 }

@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
 
   def new
     if current_user && current_user.profile
-      redirect_to "/profiles/#{current_user.id}"
+      redirect_to "/profiles/#{current_user.profile.id}"
     elsif current_user
       @profile = Profile.new
       render "new.html.erb"
@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @profile = Profile.new(image: params[:image], age: params[:age], location: params[:location], bio: params[:bio], user_id: current_user.id )
+    @profile = Profile.new(profile_pic: params[:profile_pic], age: params[:age], location: params[:location], bio: params[:bio], user_id: current_user.id )
     if @profile.save
       flash[:success] = "Profile Successfully Created!"
       redirect_to "/profiles/#{current_user.profile.id}"
@@ -43,7 +43,7 @@ class ProfilesController < ApplicationController
 
   def update
     @profile = Profile.find_by(id: params[:id])
-    @profile.assign_attributes(image: params[:image], age: params[:age], location: params[:location], bio: params[:bio], user_id: current_user.id)
+    @profile.assign_attributes(age: params[:age], location: params[:location], bio: params[:bio], user_id: current_user.id)
     if @profile.save
       flash[:success] = "Profile Successfully Updated!"
       redirect_to "/profiles/#{@profile.id}"
@@ -53,11 +53,22 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def change_pic
+    @profile = Profile.find_by(id: params[:id])
+    @profile.assign_attributes(profile_pic: params[:profile_pic])
+    if @profile.save
+      flash[:success] = "Profile Pic Successfully Updated!"
+      redirect_to "/profiles/#{@profile.id}"
+    else
+      flash[:warning] = "Profile Pic Not Updated...Please Try Again!"
+      render "edit.html.erb"
+    end
+  end
+
   def destroy
     @profile = Profile.find_by(id: params[:id])
     @profile.destroy
     flash[:success] = "Profile Successfully Deleted!"
-    redirect_to "/users/#{current_user.id}"
+    redirect_to "/profiles/new"
   end
-
 end

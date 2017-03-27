@@ -1,42 +1,50 @@
-<h1>Create A Trip:</h1>
-<%= form_tag "/trips", method: :post do %>
-  <p>
-  Traveling For:
-    <select name="trip_type">
-      <option value="Business">Business</option>
-      <option value="Pleasure">Pleasure</option>
-    </select>
-  </p>
-
-  <p>
-    Destination(city, state, country):
-    <input type="text" name="destination" value="<%= @trip.destination %>">
-  </p>
-
-  <p>
-    Begin Date:
-    <input type="date" name="begin_date" value="<%= @trip.begin_date %>">
-  </p>
-
-  <p>
-    End Date:
-    <input type="date" name="end_date" value="<%= @trip.end_date %>">
-  </p>
-
-  <p>
-    Budget: $
-    <input type="text" name="budget" value="<%= @trip.budget %>">
-  </p>
-
-  <p>
-    Describe why you are taking this trip and what you are looking for in a travel buddy:<br>
-    <textarea name="description" value="<%= @trip.description %>"> </textarea>
-  </p>
-
-  <p>
-    Create a wish list for this trip(things you really want to see and do):<br>
-    <textarea name="wish_list" value="<%= @trip.wish_list %>"> </textarea>
-  </p>
-
-  <input type="submit" value="Create Trip">
-<% end %>
+<section id="tsp_login_page" class="tsp-page-tpl">
+  <div class="container">
+    <div class="row">
+        <div class="tsp-box-content tsp-page-acc">
+          <div class="tsp-form-login col-md-6 col-sm-6 col-xs-6 tsp-full-xs tsp-no-padding-left">
+              <div class="col-lg-offset-1 col-md-offset-1">
+                <h1>Create A Trip:</h1>
+                <%= form_tag "/trips/#{@trip.id}", method: :post, class: "tsp-form-site" do %>
+                  <div class="form-group">
+                    <b>Traveling For:</b>
+                    <select name="trip_type">
+                      <option value="Business">Business</option>
+                      <option value="Pleasure">Pleasure</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="destination" value="<%= @trip.destination %>" placeholder="Destination (city, state, country, region, etc.)">
+                  </div>
+                  <div class="form-group">
+                    <b>Date Type:</b>
+                    <select name="trip_type">
+                      <option value="Approximate Range">Approximate Range</option>
+                      <option value="Exact">Exact</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" name="begin_date" value="<%= @trip.begin_date %>" placeholder="Begin Date">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}"  name="end_date" value="<%= @trip.end_date %>" placeholder="End date">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="budget" value="<%= @trip.budget %>" placeholder="Budget details (ex. $total, $hotel/day, $meal/day, etc.)">
+                  </div>
+                  <div class="form-group">
+                    <textarea id="comments" class="common" name="description" placeholder="Describe in general why you want to take this trip"><%= @trip.description %></textarea>
+                  </div>
+                  <div class="form-group">                  
+                    <textarea name="wish_list" placeholder="Create a wish list for this trip (specific things you really want to see and do)"><%= @trip.wish_list %></textarea>
+                  </div>
+                  <button type="submit" class="tsp-btn-site">Create Trip</button>
+                <% end %>
+              </div>
+          </div>
+          <div class="col-md-6"><img class="trip-new" src="/assets/happy-traveler-male.jpg">
+          </div>
+        </div>
+    </div>
+  </div>
+</section>

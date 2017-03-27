@@ -16,5 +16,26 @@ class User < ApplicationRecord
   def mailboxer_email(object)
     email
   end
+
+  def unread_mail
+    conversations = mailbox.conversations
+    conversations.each do |conversation|
+      if conversation.is_unread?(self)
+        return true
+      end
+    end
+    return false
+  end
+
+  def unread_mail_count
+    count = 0
+    conversations = mailbox.conversations
+    conversations.each do |conversation|
+      if conversation.is_unread?(self)
+        count += 1
+      end
+    end
+    return count
+  end
   
 end

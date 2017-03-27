@@ -5,10 +5,15 @@
             <div class="tsp-form-login col-md-6 col-sm-6 col-xs-6 tsp-full-xs tsp-no-padding-left">
                 <div class="col-lg-offset-1 col-md-offset-1">
                     <h2>Edit Your TravelBuddy Profile:</h2>
-                        <%= form_tag "/profiles/#{@profile.id}", method: :patch, class: "tsp-form-site" do %>
-                        <div class="form-group">
-                            <input type="text" name="image" value="<%= @profile.image %>" placeholder="Image Url">
-                        </div>
+                    <%= form_tag "/profiles/#{@profile.id}/pic", method: :patch, multipart: true, class: "tsp-form-site" do %>
+                        <label class="white-text">Change/Upload Profile Pic:
+                            <input type="file" name="profile_pic" class="button tsp-btn-site file-height">
+                        </label>
+                        <input type="submit" class="button tsp-btn-site file-height" value="Upload Photo">
+                    <% end %>
+                    <%= image_tag @profile.profile_pic.url(:thumb) %>
+                    <br><br>
+                    <%= form_tag "/profiles/#{@profile.id}", method: :patch, class: "tsp-form-site" do %>   
                         <div class="form-group">
                             <input type="text" name="age" value="<%= @profile.age %>" placeholder="Age">
                         </div>
@@ -16,7 +21,7 @@
                             <input type="text" name="location" value="<%= @profile.location %>" placeholder="Location(City, State, Country)">
                         </div>
                         <div class="form-group">
-                            <textarea name="bio" placeholder="Tell other users about yourself"><%= @profile.bio %></textarea>
+                            <textarea name="bio" placeholder="Tell other users about your travel style"><%= @profile.bio %></textarea>
                         </div>
                         <button type="submit" class="tsp-btn-site">Edit Profile</button>
                     <% end %>

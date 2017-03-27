@@ -2,14 +2,15 @@
   <div class="row">
     <div class="col-md-4">
       <h1><%= @trip.destination %></h1>
-      <p><b>Traveling For:</b> <%= @trip.trip_type %></p>
-      <p><b>Dates:</b> <%= @trip.begin_date.strftime("%B %d, %Y") %> to <%= @trip.end_date.strftime("%B %d, %Y") %></p>
-      <p><b>Budget:</b> $<%= @trip.budget %></p>
-      <p><b>Description:</b> <%= @trip.description %></p>
-      <p><b>Wish List:</b> <%= @trip.wish_list %></p>
       <% if @trip.user.id != current_user.id %>
-        <p><b>Created By:</b> <a href="/profiles/<%= @trip.user.profile.id %>"><%= @trip.user.user_name %></p>
+        <p><b>Created By:</b> <a class="link-underline" href="/profiles/<%= @trip.user.profile.id %>"><%= @trip.user.user_name %></a></p>
       <% end %>
+      <p><b>Traveling For: </b><span><%= @trip.trip_type %></span></p>
+      <p><b>Date Type: </b><span><%= @trip.date_type %></span></p>
+      <p><b>Dates: </b><span> <%= @trip.begin_date.strftime("%B %d, %Y") %> to <%= @trip.end_date.strftime("%B %d, %Y") %></span></p>
+      <p><b>Budget: </b><span> <%= @trip.budget %></span></p>
+      <p><b>Description: </b><span> <%= @trip.description %></span></p>
+      <p><b>Wish List: </b><span> <%= @trip.wish_list %></span></p>
 
       <% if @trip.user.id == current_user.id %>
         <a href="/trips/<%= @trip.id %>/edit"><button class="button tsp-btn-site">Edit This Trip</button></a><br><br>
