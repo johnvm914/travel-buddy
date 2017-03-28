@@ -7,23 +7,23 @@
       <% end %>
       <p><b>Traveling For: </b><span><%= @trip.trip_type %></span></p>
       <p><b>Date Type: </b><span><%= @trip.date_type %></span></p>
-      <p><b>Dates: </b><span> <%= @trip.begin_date.strftime("%B %d, %Y") %> to <%= @trip.end_date.strftime("%B %d, %Y") %></span></p>
-      <p><b>Budget: </b><span> <%= @trip.budget %></span></p>
-      <p><b>Description: </b><span> <%= @trip.description %></span></p>
-      <p><b>Wish List: </b><span> <%= @trip.wish_list %></span></p>
+      <p><b>Dates: </b><br><span> <%= @trip.begin_date.strftime("%B %d, %Y") %> to <%= @trip.end_date.strftime("%B %d, %Y") %></span></p>
+      <p><b>Budget: </b><br><span> <%= @trip.budget %></span></p>
+      <p><b>Description: </b><br><span> <%= @trip.description %></span></p>
+      <p><b>Wish List: </b><br><span> <%= @trip.wish_list %></span></p>
 
       <% if @trip.user.id == current_user.id %>
         <a href="/trips/<%= @trip.id %>/edit"><button class="button tsp-btn-site">Edit This Trip</button></a><br><br>
-        <%= button_to "Delete This Trip", "/trips/#{@trip.id}", method: :delete, class: "button tsp-btn-site" %>
+        <%= button_to "Delete This Trip", "/trips/#{@trip.id}", method: :delete, class: "button tsp-btn-site" %><br><br>
       <% elsif @trip.not_favorited_by(current_user.id)  %>
-        <%= button_to "Bookmark This Trip", "/favorites", params: {trip_id: @trip.id}, method: :post, class: "button tsp-btn-site" %>
+        <%= button_to "Bookmark This Trip", "/favorites", params: {trip_id: @trip.id}, method: :post, class: "button tsp-btn-site" %><br>
       <% else %>
         <b style="color:rgb(255, 193, 7);">Trip Bookmarked</b>
       <% end %>
     </div>
 
     <div class="col-md-8">
-      <h1>Explore This Location:</h1>
+      <h1 class="explore-center">Explore This Location:</h1>
       <iframe
         width="600"
         height="450"

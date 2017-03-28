@@ -1,7 +1,7 @@
 class Trip < ApplicationRecord
   belongs_to :user
   has_many :favorites
-  validates :type, :destination, :date_type, :begin_date, :end_date, :budget, :description, :wish_list, presence: true
+  validates :trip_type, :destination, :date_type, :begin_date, :end_date, :budget, :description, :wish_list, presence: true
 
   def not_favorited_by(id)
     not_favorited = true

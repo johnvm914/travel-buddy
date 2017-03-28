@@ -11,7 +11,8 @@
       <p><b>Name:</b> <span><%= @profile.user.first_name %> <%= @profile.user.last_name %></span></p>
       <p><b>Age:</b> <span><%= @profile.age %></span></p>
       <p><b>Location:</b> <span><%= @profile.location %></span></p>
-      <p><b>Bio:</b> <span><%= @profile.bio %></span></p>
+      <p><b>A bit about me and travel:</b><br>
+        <span><%= @profile.bio %></span></p>
 
       <% if @profile.user.id == current_user.id %>
         <a href="/profiles/<%= @profile.id %>/edit"><button class="button tsp-btn-site">Edit Your Profile</button></a>
@@ -31,22 +32,22 @@
       <% else %>
         <h3><%= @profile.user.user_name %>'s Trips:</h3>
       <% end %>
-      <ol>
+      <ul>
         <% @profile.user.trips.each do |trip| %>
           <li><a class="link-underline" href="/trips/<%= trip.id %>"><%= trip.destination %></a></li>
         <% end %>
-      </ol>
+      </ul>
 
       <% if @profile.user.id == current_user.id %>
         <h3>Users I'm following:</h3>
       <% else %>
         <h3>Users <%= @profile.user.user_name %> is following:</h3>
       <% end %>
-      <ol>
+      <ul>
         <% @profile.user.friends.each do |friend| %>
           <li><a class="link-underline" href="/profiles/<%= friend.id %>"><%= friend.user_name %></a></li>
         <% end %>
-      </ol>
+      </ul>
     </div>
 
     <div class="col-md-4">
@@ -55,11 +56,11 @@
       <% else %>
         <h3>Trips <%= @profile.user.user_name %> is interested in:</h3>
       <% end %>
-      <ol>
+      <ul>
         <% @profile.user.favorites.each do |favorite| %>
           <li><a class="link-underline" href="/trips/<%= favorite.trip.id %>"><%= favorite.trip.destination %></a></li>
         <% end %>
-      </ol>
+      </ul>
     </div> 
   </div>
 </div>

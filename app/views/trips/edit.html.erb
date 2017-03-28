@@ -17,19 +17,26 @@
                     <input type="text" name="destination" value="<%= @trip.destination %>" placeholder="Destination(city, state, country, region, etc.)">
                   </div>
                   <div class="form-group">
-                    <input type="date" name="begin_date" value="<%= @trip.begin_date %>" placeholder="Begin Date">
+                    <b>Date Type:</b>
+                    <select name="date_type">
+                      <option value="Approximate Range">Approximate Range</option>
+                      <option value="Exact">Exact</option>
+                    </select>
                   </div>
                   <div class="form-group">
-                    <input type="date" name="end_date" value="<%= @trip.end_date %>" placeholder="End date">
+                    <input type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" name="begin_date" value="<%= @trip.begin_date %>" placeholder="Begin Date">
                   </div>
                   <div class="form-group">
-                    <input type="text" name="budget" value="<%= @trip.budget %>" placeholder="Budget details (ex. $total, $hotel/day, $meal/day, etc.)">
+                    <input type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}"  name="end_date" value="<%= @trip.end_date %>" placeholder="End date">
                   </div>
                   <div class="form-group">
-                    <textarea id="comments" class="common" name="description" placeholder="Describe in general why you want to take this trip"><%= @trip.description %></textarea>
+                    <textarea name="budget" placeholder="Budget details (ex. $total, $hotel/day, $meal/day, etc.)"><%= @trip.budget %></textarea>
+                  </div>
+                  <div class="form-group">
+                    <textarea name="description" placeholder="Describe in general why you want to take this trip"><%= @trip.description %></textarea>
                   </div>
                   <div class="form-group">                  
-                    <textarea name="wish_list" placeholder="Create a wish list for this trip (specific things you really want to see and do)"><%= @trip.wish_list %> </textarea>
+                    <textarea name="wish_list" placeholder="Create a wish list for this trip (specific things you really want to see and do)"><%= @trip.wish_list %></textarea>
                   </div>
                   <button type="submit" class="tsp-btn-site">Edit Trip</button>
                 <% end %>
