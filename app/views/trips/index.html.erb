@@ -7,7 +7,7 @@
     <h3>Click on a link for more detailed user and trip information</h3>
     <% @trips.each do |trip| %>
       <p><b>User: </b><a class="link-underline" href="/profiles/<%= trip.user.profile.id %>"><%= trip.user.user_name %></a></p>
-      <p><b>Destination: </b><a class="link-underline" href="/trips/<%= trip.id %>"><%= trip.destination %></a></p>
+      <p><b>Destination: </b><a class="link-underline" href="/trips/<%= trip.id %>"><%= trip.destination.titleize %></a></p>
       <hr>
     <% end %>
   <% end %>

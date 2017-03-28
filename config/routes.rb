@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   delete "/trips/:id", to: "trips#destroy"
 
   post "/favorites", to: "favorites#create"
+  delete "/favorites/:id", to: "favorites#destroy"
 
   resources :conversations, only: [:index, :show, :destroy] do
     member do

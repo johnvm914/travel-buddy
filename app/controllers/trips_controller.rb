@@ -1,7 +1,7 @@
 class TripsController < ApplicationController
 
   def index
-    destination = params[:destination]
+    destination = params[:destination].downcase
     @trips = Trip.where("destination LIKE ? AND user_id != ?", "%#{destination}%", current_user.id)
     render "index.html.erb"
   end
@@ -12,7 +12,7 @@ class TripsController < ApplicationController
   end
 
   def create
-    @trip = Trip.new(user_id: current_user.id, trip_type: params[:trip_type], destination: params[:destination], date_type: params[:date_type], begin_date: params[:begin_date], end_date: params[:end_date], budget: params[:budget], description: params[:description], wish_list: params[:wish_list])
+    @trip = Trip.new(user_id: current_user.id, trip_type: params[:trip_type], destination: params[:destination].downcase, date_type: params[:date_type], begin_date: params[:begin_date], end_date: params[:end_date], budget: params[:budget], description: params[:description], wish_list: params[:wish_list])
     if @trip.save
       flash[:success] = "Trip Successfully Created!"
       redirect_to "/trips/#{@trip.id}"
@@ -38,7 +38,7 @@ class TripsController < ApplicationController
 
   def update
     @trip = Trip.find_by(id: params[:id])
-    @trip.assign_attributes(trip_type: params[:trip_type], destination: params[:destination], date_type: params[:date_type], begin_date: params[:begin_date], end_date: params[:end_date], budget: params[:budget], description: params[:description], wish_list: params[:wish_list])
+    @trip.assign_attributes(trip_type: params[:trip_type], destination: params[:destination].downcase, date_type: params[:date_type], begin_date: params[:begin_date], end_date: params[:end_date], budget: params[:budget], description: params[:description], wish_list: params[:wish_list])
     if @trip.save
       flash[:success] = "Trip Successfully Updated!"
       redirect_to "/trips/#{@trip.id}"

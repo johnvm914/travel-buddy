@@ -16,6 +16,14 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
+a:link {
+    color: Khaki;
+}
+
+a.button {
+  color: white;
+}
+
 a:visited {
     color: rgb(244, 254, 251);
 }
@@ -28,6 +36,9 @@ a:hover {
   padding: 15px 20px;
   line-height: 15px;
   font-size: 14px;
+  a:link {
+    color: white;
+  }
 }
 
 header {

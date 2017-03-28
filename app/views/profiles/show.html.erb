@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
       <% if @profile.user.id == current_user.id %>
         <h1>My Profile:</h1>
       <% else %>
@@ -26,41 +26,55 @@
       <% end %>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-6 right-align">
       <% if @profile.user.id == current_user.id %>
         <h3>My Trips:</h3>
       <% else %>
         <h3><%= @profile.user.user_name %>'s Trips:</h3>
       <% end %>
-      <ul>
-        <% @profile.user.trips.each do |trip| %>
-          <li><a class="link-underline" href="/trips/<%= trip.id %>"><%= trip.destination %></a></li>
-        <% end %>
-      </ul>
+      <% if @profile.user.trips == [] %>
+        <p class="white-text">No trips created yet</p><br>
+      <% else %>
+        <ul>
+          <% @profile.user.trips.each do |trip| %>
+            <li><a class="link-underline" href="/trips/<%= trip.id %>"><%= trip.destination.titleize %></a></li>
+          <% end %>
+        </ul><br>
+      <% end %>
 
       <% if @profile.user.id == current_user.id %>
         <h3>Users I'm following:</h3>
       <% else %>
         <h3>Users <%= @profile.user.user_name %> is following:</h3>
       <% end %>
-      <ul>
-        <% @profile.user.friends.each do |friend| %>
-          <li><a class="link-underline" href="/profiles/<%= friend.id %>"><%= friend.user_name %></a></li>
-        <% end %>
-      </ul>
-    </div>
+      <% if @profile.user.friends == [] %>
+        <p class="white-text">Not following anyone</p><br>
+      <% else %>
+        <ul>
+          <% @profile.user.friends.each do |friend| %>
+            <li><a class="link-underline" href="/profiles/<%= friend.id %>"><%= friend.user_name %></a></li>
+          <% end %>
+        </ul><br>
+      <% end %>
 
-    <div class="col-md-4">
       <% if @profile.user.id == current_user.id %>
         <h3>Trips I'm interested in:</h3>
       <% else %>
         <h3>Trips <%= @profile.user.user_name %> is interested in:</h3>
       <% end %>
-      <ul>
-        <% @profile.user.favorites.each do |favorite| %>
-          <li><a class="link-underline" href="/trips/<%= favorite.trip.id %>"><%= favorite.trip.destination %></a></li>
-        <% end %>
-      </ul>
+      <% if @profile.user.favorites == [] %>
+        <p class="white-text">No bookmarked trips</p>
+      <% else %>
+        <ul>
+          <% @profile.user.favorites.each do |favorite| %>
+            <li><a class="link-underline" href="/trips/<%= favorite.trip.id %>"><%= favorite.trip.destination.titleize %></a>
+            <% if @profile.user.id == current_user.id %>
+              <%= link_to "(Remove)", "/favorites/#{favorite.id}", method: :delete, class: "link-underline" %>
+            <% end %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
     </div> 
   </div>
 </div>
