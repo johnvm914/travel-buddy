@@ -53,3 +53,12 @@ textarea {
   resize: none;
   overflow: hidden;
 }
+
+.side-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pad-right {
+  margin-right: 150px;
+}

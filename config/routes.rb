@@ -33,6 +33,9 @@ Rails.application.routes.draw do
   post "/favorites", to: "favorites#create"
   delete "/favorites/:id", to: "favorites#destroy"
 
+  post "/friendships", to: "friendships#create"
+  delete "/friendships/:id", to: "friendships#destroy"
+
   resources :conversations, only: [:index, :show, :destroy] do
     member do
       post :reply

@@ -15,14 +15,19 @@
         <span><%= @profile.bio %></span></p>
 
       <% if @profile.user.id == current_user.id %>
-        <a href="/profiles/<%= @profile.id %>/edit"><button class="button tsp-btn-site">Edit Your Profile</button></a>
-        <br><br>
-        <%= button_to "Delete Your Profile", "/profiles/#{@profile.id}", method: :delete, class: "button tsp-btn-site" %>
+        <div class="side-buttons">
+          <a href="/profiles/<%= @profile.id %>/edit"><button class="button tsp-btn-site">Edit Your Profile</button></a>
+          <%= button_to "Delete Your Profile", "/profiles/#{@profile.id}", method: :delete, class: "button tsp-btn-site pad-right" %>
+        </div>
         <br>
       <% else %>
+        <div class="side-buttons">
+          <%= link_to "Message #{@profile.user.user_name}", new_message_path(user: @profile.user.id), class: "button tsp-btn-site" %>
+          <% if current_user.not_friends(@profile.user.id) %>
+            <%= button_to "Follow #{@profile.user.user_name}", "/friendships", params: {friend_id: @profile.user.id }, method: :post, class: "button tsp-btn-site pad-right" %>
+          <% end %>
+        </div>
         <br>
-        <%= link_to "Message #{@profile.user.user_name}", new_message_path(user: @profile.user.id), class: "button tsp-btn-site" %>
-        <br><br>
       <% end %>
     </div>
 
@@ -52,7 +57,7 @@
       <% else %>
         <ul>
           <% @profile.user.friends.each do |friend| %>
-            <li><a class="link-underline" href="/profiles/<%= friend.id %>"><%= friend.user_name %></a></li>
+            <li><a class="link-underline" href="/profiles/<%= friend.profile.id %>"><%= friend.user_name %></a></li>
           <% end %>
         </ul><br>
       <% end %>

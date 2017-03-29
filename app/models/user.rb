@@ -37,5 +37,14 @@ class User < ApplicationRecord
     end
     return count
   end
+
+  def not_friends(id)
+    friends.each do |friend|
+      if friend.id == id
+        return false
+      end
+    end
+    return true
+  end
   
 end
