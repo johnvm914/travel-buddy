@@ -17,7 +17,7 @@
       <% if @profile.user.id == current_user.id %>
         <div class="side-buttons">
           <a href="/profiles/<%= @profile.id %>/edit"><button class="button tsp-btn-site">Edit Your Profile</button></a>
-          <%= button_to "Delete Your Profile", "/profiles/#{@profile.id}", method: :delete, class: "button tsp-btn-site pad-right" %>
+          <%= button_to "Delete Your Profile", "/profiles/#{@profile.id}", method: :delete, class: "button tsp-btn-site pad-right", data: {confirm: 'Are you sure?'} %>
         </div>
         <br>
       <% else %>
@@ -57,7 +57,11 @@
       <% else %>
         <ul>
           <% @profile.user.friends.each do |friend| %>
-            <li><a class="link-underline" href="/profiles/<%= friend.profile.id %>"><%= friend.user_name %></a></li>
+            <li><a class="link-underline" href="/profiles/<%= friend.profile.id %>"><%= friend.user_name %></a>
+            <% if @profile.user.id == current_user.id %>
+              <%= link_to "(Unfollow)", "/friendships/#{friend.id}", method: :delete, class: "link-underline khaki-link", data: {confirm: 'Are you sure?'} %>
+            <% end %>
+            </li>
           <% end %>
         </ul><br>
       <% end %>
@@ -74,7 +78,7 @@
           <% @profile.user.favorites.each do |favorite| %>
             <li><a class="link-underline" href="/trips/<%= favorite.trip.id %>"><%= favorite.trip.destination.titleize %></a>
             <% if @profile.user.id == current_user.id %>
-              <%= link_to "(Remove)", "/favorites/#{favorite.id}", method: :delete, class: "link-underline" %>
+              <%= link_to "(Remove)", "/favorites/#{favorite.id}", method: :delete, class: "link-underline khaki-link", data: {confirm: 'Are you sure?'} %>
             <% end %>
             </li>
           <% end %>

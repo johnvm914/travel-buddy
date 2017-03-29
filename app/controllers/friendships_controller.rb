@@ -12,9 +12,14 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-
+    friendship = Friendship.find_by(friend_id: params[:id])
+    @user = User.find_by(id: params[:id])
+    if friendship.destroy
+      flash[:success] = "You are no longer following #{@user.user_name}."
+    else
+      flash[:warning] = "Something went wrong...unfollow request failed."
+    end
+    redirect_to "/profiles/#{current_user.profile.id}"
   end
-
-
 
 end
