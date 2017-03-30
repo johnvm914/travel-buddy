@@ -44,7 +44,7 @@ class TripsController < ApplicationController
       redirect_to "/trips/#{@trip.id}"
     else
       flash[:warning] = "Trip Not Updated...Please Try Again!"
-      render "/trips/#{@trip.id}/edit"
+      render "edit.html.erb"
     end
   end
 
