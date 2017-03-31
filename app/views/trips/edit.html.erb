@@ -9,8 +9,12 @@
                   <div class="form-group">
                     <b>Traveling For:</b>
                     <select name="trip_type">
-                      <option value="Business">Business</option>
-                      <option value="Pleasure">Pleasure</option>
+                      <option value="<%= @trip.trip_type %>" selected><%= @trip.trip_type %></option>
+                      <% if @trip.trip_type == "Pleasure" %>
+                        <option value="Business">Business</option>
+                      <% else %>
+                        <option value="Pleasure">Pleasure</option>
+                      <% end %>
                     </select>
                   </div>
                   <div class="form-group">
