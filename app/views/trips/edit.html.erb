@@ -23,8 +23,12 @@
                   <div class="form-group">
                     <b>Date Type:</b>
                     <select name="date_type">
-                      <option value="Approximate Range">Approximate Range</option>
-                      <option value="Exact">Exact</option>
+                      <option value="<%= @trip.date_type %>" selected><%= @trip.date_type %></option>
+                      <% if @trip.date_type == "Exact" %>
+                        <option value="Approximate Range">Approximate Range</option>
+                      <% else %>
+                        <option value="Exact">Exact</option>
+                      <% end %>
                     </select>
                   </div>
                   <div class="form-group">
