@@ -7,7 +7,7 @@
         <h1><%= @profile.user.user_name %>'s Profile:</h1>
       <% end %>
 
-      <%= image_tag @profile.profile_pic.url(:thumb) %>
+      <img src="<%= @profile.profile_pic.url(:thumb) %>">
       <p><b>Name:</b> <span><%= @profile.user.first_name %> <%= @profile.user.last_name %></span></p>
       <p><b>Age:</b> <span><%= @profile.age %></span></p>
       <p><b>Location:</b> <span><%= @profile.location %></span></p>
