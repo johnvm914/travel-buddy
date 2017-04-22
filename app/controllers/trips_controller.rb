@@ -1,8 +1,13 @@
 class TripsController < ApplicationController
 
   def index
-    destination = params[:destination].downcase
-    @trips = Trip.where("destination LIKE ? AND user_id != ?", "%#{destination}%", current_user.id)
+    if params[:destination]
+      destination = params[:destination].downcase
+      @trips = Trip.where("destination LIKE ? AND user_id != ?", "%#{destination}%", current_user.id)
+    elsif params[:date]
+      date = params[:date]
+      @trips = Trip.where("begin_date <= ? AND end_date >= ? AND user_id != ?", date, date, current_user.id)
+    end
     render "index.html.erb"
   end
 

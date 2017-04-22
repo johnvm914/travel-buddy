@@ -78,7 +78,15 @@
                                             <ul>
                                                 <li class="tsp-has-menu-child">
                                                     <%= form_tag "/trips", method: :get do %>
-                                                      <input type="text" name="destination" placeholder="Search Trips By Destination" class="search-input" autocomplete="off">
+                                                      <label for="destination">Search Trips By Destination</label>
+                                                      <input type="text" id="destination" name="destination" class="search-input" autocomplete="off">
+                                                      <button type="submit" class="button tsp-btn-site">Submit</button>
+                                                    <% end %>
+                                                </li>
+                                                <li class="tsp-has-menu-child">
+                                                    <%= form_tag "/trips", method: :get do %>
+                                                      <label for="date">Search Trips By Date<br>yyyy-mm-dd</label>    
+                                                      <input type="text" id="date" class="datepicker" data-date-format='yyyy-mm-dd' name="date" class="search-input">
                                                       <button type="submit" class="button tsp-btn-site">Submit</button>
                                                     <% end %>
                                                 </li>
