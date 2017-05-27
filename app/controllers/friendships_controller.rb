@@ -1,7 +1,8 @@
 class FriendshipsController < ApplicationController
+  before_action :authenticate_user!
 
   def create
-    friendship = Friendship.new(user_id: current_user.id, friend_id: params[:friend_id])
+    friendship = Friendship.new(friendship_params)
     @friend = User.find_by(id: params[:friend_id])
     if friendship.save
       flash[:success] = "You are now following #{@friend.user_name}!"
@@ -22,4 +23,9 @@ class FriendshipsController < ApplicationController
     redirect_to "/profiles/#{current_user.profile.id}"
   end
 
+  private
+
+    def friendship_params
+      params.permit(:friend_id).merge(user_id: current_user.id)
+    end
 end

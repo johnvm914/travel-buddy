@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     if params[:destination]
@@ -17,7 +18,7 @@ class TripsController < ApplicationController
   end
 
   def create
-    @trip = Trip.new(user_id: current_user.id, trip_type: params[:trip_type], destination: params[:destination].downcase, date_type: params[:date_type], begin_date: params[:begin_date], end_date: params[:end_date], budget: params[:budget], description: params[:description], wish_list: params[:wish_list])
+    @trip = Trip.new(trip_params)
     if @trip.save
       flash[:success] = "Trip Successfully Created!"
       redirect_to "/trips/#{@trip.id}"
@@ -43,7 +44,7 @@ class TripsController < ApplicationController
 
   def update
     @trip = Trip.find_by(id: params[:id])
-    @trip.assign_attributes(trip_type: params[:trip_type], destination: params[:destination].downcase, date_type: params[:date_type], begin_date: params[:begin_date], end_date: params[:end_date], budget: params[:budget], description: params[:description], wish_list: params[:wish_list])
+    @trip.assign_attributes(trip_params)
     if @trip.save
       flash[:success] = "Trip Successfully Updated!"
       redirect_to "/trips/#{@trip.id}"
@@ -59,4 +60,11 @@ class TripsController < ApplicationController
     flash[:success] = "Trip Successfully Deleted!"
     redirect_to "/profiles/#{current_user.profile.id}"
   end
+
+  private
+
+    def trip_params
+      params[:destination] = params[:destination].downcase
+      params.permit(:trip_type, :destination, :date_type, :begin_date, :end_date, :budget, :description, :wish_list).merge(user_id: current_user.id)
+    end
 end

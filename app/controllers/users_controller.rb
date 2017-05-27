@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def new
     if current_user
-      redirect_to "/users/#{current_user.id}"
+      redirect_to "/pages"
     else
       @user = User.new
       render "new.html.erb"
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], user_name: params[:user_name], password: params[:password], password_confirmation: params[:password_confirmation])
+    @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Account Successfully Created!"
@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:id])
-    @user.assign_attributes(first_name: params[:first_name], last_name: params[:last_name,], email: params[:email], user_name: params[:user_name], password: params[:password], password_confirmation: params[:password_confirmation])
+    @user.assign_attributes(user_params)
     if @user.save
       flash[:success] = "Account Successfully Updated!"
       redirect_to "/users/#{@user.id}"
@@ -57,5 +57,11 @@ class UsersController < ApplicationController
     flash[:success] = "Account Successfully Deleted!"
     redirect_to "/signup"
   end
+
+  private
+
+    def user_params
+      params.permit(:first_name, :last_name, :email, :user_name, :password, :password_confirmation)
+    end
   
 end

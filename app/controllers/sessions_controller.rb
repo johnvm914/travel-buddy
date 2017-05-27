@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
   def new
     if current_user
-      redirect_to "/users/#{current_user.id}"
+      redirect_to "/pages"
     else
       render "new.html.erb"
     end

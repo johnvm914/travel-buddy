@@ -3,7 +3,7 @@
     <div class="col-md-5">
       <h1><%= @trip.destination.titleize %></h1>
       <% if @trip.user.id != current_user.id %>
-        <p><b>Created By:</b> <a class="link-underline" href="/profiles/<%= @trip.user.profile.id %>"><%= @trip.user.user_name %></a></p>
+        <p><b>Created By:</b> <a class="link-underline" href="/profiles/<%= profile_id(@trip.user.profile) %>"><%= @trip.user.user_name %></a></p>
       <% end %>
       <p><b>Traveling For: </b><span><%= @trip.trip_type %></span></p>
       <p><b>Date Type: </b><span><%= @trip.date_type %></span></p>

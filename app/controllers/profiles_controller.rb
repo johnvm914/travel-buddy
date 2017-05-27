@@ -1,18 +1,17 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
 
   def new
-    if current_user && current_user.profile
+    if current_user.profile
       redirect_to "/profiles/#{current_user.profile.id}"
-    elsif current_user
+    else
       @profile = Profile.new
       render "new.html.erb"
-    else
-      redirect_to "/login"
     end
   end
 
   def create
-    @profile = Profile.new(profile_pic: params[:profile_pic], age: params[:age], location: params[:location], bio: params[:bio], user_id: current_user.id )
+    @profile = Profile.new(profile_params)
     if @profile.save
       flash[:success] = "Profile Successfully Created!"
       redirect_to "/profiles/#{current_user.profile.id}"
@@ -27,7 +26,8 @@ class ProfilesController < ApplicationController
     if @profile
       render "show.html.erb"
     else
-      redirect_to "/profiles/new"
+      flash[:warning] = "Profile Has Not Been Created Yet!"
+      redirect_to "/pages"
     end
   end
 
@@ -42,7 +42,7 @@ class ProfilesController < ApplicationController
 
   def update
     @profile = Profile.find_by(id: params[:id])
-    @profile.assign_attributes(age: params[:age], location: params[:location], bio: params[:bio], user_id: current_user.id)
+    @profile.assign_attributes(profile_params)
     if @profile.save
       flash[:success] = "Profile Successfully Updated!"
       redirect_to "/profiles/#{@profile.id}"
@@ -54,7 +54,7 @@ class ProfilesController < ApplicationController
 
   def change_pic
     @profile = Profile.find_by(id: params[:id])
-    @profile.assign_attributes(profile_pic: params[:profile_pic])
+    @profile.assign_attributes(profile_params)
     if @profile.save
       flash[:success] = "Profile Pic Successfully Updated!"
       redirect_to "/profiles/#{@profile.id}"
@@ -70,4 +70,10 @@ class ProfilesController < ApplicationController
     flash[:success] = "Profile Successfully Deleted!"
     redirect_to "/profiles/new"
   end
+
+  private
+
+    def profile_params
+      params.permit(:profile_pic, :age, :location, :bio).merge(user_id: current_user.id)
+    end
 end

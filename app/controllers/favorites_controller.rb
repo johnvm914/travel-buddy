@@ -1,7 +1,8 @@
 class FavoritesController < ApplicationController
+  before_action :authenticate_user!
 
   def create
-    @favorite = Favorite.create(user_id: current_user.id, trip_id: params[:trip_id])
+    @favorite = Favorite.create(favorite_params)
     flash[:success] = "Trip successfully bookmarked!"
     redirect_to "/profiles/#{current_user.profile.id}"
   end
@@ -12,5 +13,11 @@ class FavoritesController < ApplicationController
     flash[:success] = "Trip successfully removed!"
     redirect_to "/profiles/#{current_user.profile.id}"
   end
+
+  private
+
+    def favorite_params
+      params.permit(:trip_id).merge(user_id: current_user.id)
+    end
 
 end
