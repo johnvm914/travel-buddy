@@ -16,7 +16,7 @@ $(document).ready(function() {
     ga('create', 'UA-XXXXX-X');
     ga('send', 'pageview');
 
-    menu responsive use slicknav
+    // menu responsive use slicknav
     $('#menu').slicknav({
         label: '',
     });
