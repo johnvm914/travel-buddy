@@ -16,8 +16,8 @@
 
       <% if @profile.user.id == current_user.id %>
         <div class="side-buttons">
-          <a href="/profiles/<%= @profile.id %>/edit"><button class="button tsp-btn-site">Edit Your Profile</button></a>
-          <%= button_to "Delete Your Profile", "/profiles/#{@profile.id}", method: :delete, class: "button tsp-btn-site pad-right", data: {confirm: 'Are you sure?'} %>
+          <a href="/profiles/<%= @profile.id %>/edit"><button class="button tsp-btn-site" style="width: 190px">Edit Your Profile</button></a>
+          <%= button_to "Delete Your Profile", "/profiles/#{@profile.id}", method: :delete, class: "button tsp-btn-site pad-right", style: "margin-left: 10px", data: {confirm: 'Are you sure?'} %>
         </div>
         <br>
       <% else %>
