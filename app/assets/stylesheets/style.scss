@@ -67,3 +67,38 @@ textarea {
 .pad-right {
   margin-right: 150px;
 }
+
+.show-menu {
+  text-align: right;
+}
+
+.slicknav_nav { 
+  position: relative;
+  z-index: 100; 
+  width: 100%; 
+  top: 21px;
+}
+
+.slicknav_menu {
+  background: SlateGray;
+  height: 50px;
+  padding: 0;
+}
+
+.slicknav_btn {
+  height: 2px;
+}
+
+.tsp-account {
+  padding-bottom: 0px;
+  padding-right: 25px;
+  position: relative;
+  z-index: 900;
+}
+
+.tsp-header-main {
+  border-top: 0px;
+  background: SlateGray;
+}
+
+
