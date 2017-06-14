@@ -22,9 +22,9 @@
         <br>
       <% else %>
         <div class="side-buttons">
-          <%= link_to "Message #{@profile.user.user_name}", new_message_path(user: @profile.user.id), class: "button tsp-btn-site" %>
+          <%= button_to "Message #{@profile.user.user_name}", new_message_path, method: :get, params: { user: @profile.user.id }, class: "button tsp-btn-site" %>
           <% if current_user.not_friends(@profile.user.id) %>
-            <%= button_to "Follow #{@profile.user.user_name}", "/friendships", params: {friend_id: @profile.user.id }, method: :post, class: "button tsp-btn-site pad-right" %>
+            <%= button_to "Follow #{@profile.user.user_name}", "/friendships", params: {friend_id: @profile.user.id }, method: :post, class: "button tsp-btn-site pad-right", style: "margin-left: 15px" %>
           <% end %>
         </div>
         <br>
