@@ -1,7 +1,9 @@
 (function($, window){
     var $window = $(window);
     var $countupSection = $('#tsp_served');
-    var countupTop = $countupSection.offset().top;
+    if($countupSection.length) {
+        var countupTop = $countupSection.offset().top;
+    }
   
     var debounce = function(func, wait, immediate) {
         var timeout;
